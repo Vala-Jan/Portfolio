@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jan Vala — Software Developer</title>
+<meta name="description" content="Jan Vala, software developer — projekty, dovednosti a kontakt.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,680&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav__brand" href="#top">jan<span class="dim">@</span>vala</a>
+  <div class="nav__links">
+    <a href="#about">o mně</a>
+    <a href="#skills">dovednosti</a>
+    <a href="#projects">changelog</a>
+    <a href="#contact">kontakt</a>
+  </div>
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Přepnout světlý/tmavý režim">◐</button>
+</nav>
+
+<main id="top">
+
+  <header class="hero">
+    <p class="hero__path">~/jan-vala/portfolio <span class="cursor" aria-hidden="true">▌</span></p>
+    <h1 class="hero__name">Jan Vala</h1>
+    <p class="hero__role">Software Developer</p>
+    <p class="hero__tagline">
+      Stavím weby a nástroje, které fungují spolehlivě a vypadají promyšleně —
+      od prvního commitu po nasazení do produkce.
+    </p>
+    <div class="hero__meta">
+      <span class="badge"><span class="badge__dot" aria-hidden="true"></span>Otevřený novým příležitostem</span>
+      <span class="hero__location">Praha, CZ</span>
+    </div>
+    <div class="hero__cta">
+      <a class="btn btn--primary" href="#contact">Napsat email</a>
+      <a class="btn btn--ghost" href="#projects">Zobrazit projekty</a>
+    </div>
+  </header>
+
+  <section class="section" id="about">
+    <div class="section__head">
+      <p class="eyebrow">01 · soubor</p>
+      <h2 class="mono-file">README.md</h2>
+    </div>
+    <div class="about__grid">
+      <div class="about__text">
+        <p>
+          Jsem vývojář zaměřený na webové aplikace — od návrhu rozhraní přes API
+          až po nasazení. Baví mě, když je kód čitelný a produkt dává smysl
+          i po roce údržby. Tenhle text je zatím placeholder — nahraď ho pár
+          větami o sobě, svém přístupu k práci a tom, co tě na vývoji baví.
+        </p>
+        <p>
+          Poslední dobou se soustředím na full-stack projekty v TypeScriptu
+          a na zlepšování výkonu a přístupnosti webů, které stavím.
+        </p>
+      </div>
+      <dl class="specs">
+        <div class="specs__row">
+          <dt>started</dt><dd>2021</dd>
+        </div>
+        <div class="specs__row">
+          <dt>focus</dt><dd>Web &amp; Full-stack</dd>
+        </div>
+        <div class="specs__row">
+          <dt>stack</dt><dd>TypeScript · React · Node.js</dd>
+        </div>
+        <div class="specs__row">
+          <dt>location</dt><dd>Praha, CZ</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="section__head">
+      <p class="eyebrow">02 · soubor</p>
+      <h2 class="mono-file">dependencies.json</h2>
+    </div>
+    <div class="skills">
+      <div class="skills__group">
+        <p class="skills__label">jazyky &amp; frameworky</p>
+        <ul class="tags">
+          <li>JavaScript</li><li>TypeScript</li><li>React</li><li>Next.js</li><li>Node.js</li>
+        </ul>
+      </div>
+      <div class="skills__group">
+        <p class="skills__label">backend &amp; data</p>
+        <ul class="tags">
+          <li>Python</li><li>PostgreSQL</li><li>REST API</li><li>GraphQL</li>
+        </ul>
+      </div>
+      <div class="skills__group">
+        <p class="skills__label">nástroje</p>
+        <ul class="tags">
+          <li>Git</li><li>Docker</li><li>Figma</li><li>Linux</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="section__head">
+      <p class="eyebrow">03 · soubor</p>
+      <h2 class="mono-file">CHANGELOG.md</h2>
+    </div>
+    <p class="section__hint">Vyber si a nahraď vlastními projekty — struktura zůstává, obsah je na tobě.</p>
+
+    <ol class="changelog">
+      <li class="entry">
+        <div class="entry__meta">
+          <span class="entry__version">v2025.03</span>
+          <span class="entry__tag entry__tag--feature">projekt</span>
+        </div>
+        <h3 class="entry__title">TaskFlow — správce úkolů pro týmy</h3>
+        <p class="entry__desc">
+          Webová aplikace pro plánování a sledování úkolů s real-time synchronizací
+          mezi členy týmu a přehledy produktivity.
+        </p>
+        <ul class="entry__stack">
+          <li>React</li><li>Node.js</li><li>PostgreSQL</li><li>WebSocket</li>
+        </ul>
+        <div class="entry__links">
+          <a href="#">GitHub ↗</a>
+          <a href="#">Live demo ↗</a>
+        </div>
+      </li>
+
+      <li class="entry">
+        <div class="entry__meta">
+          <span class="entry__version">v2024.11</span>
+          <span class="entry__tag entry__tag--feature">projekt</span>
+        </div>
+        <h3 class="entry__title">WeatherNow — předpověď počasí</h3>
+        <p class="entry__desc">
+          Rychlá progresivní webová aplikace nad veřejným API s offline
+          podporou a personalizovanými lokacemi.
+        </p>
+        <ul class="entry__stack">
+          <li>TypeScript</li><li>Vite</li><li>Public API</li>
+        </ul>
+        <div class="entry__links">
+          <a href="#">GitHub ↗</a>
+          <a href="#">Live demo ↗</a>
+        </div>
+      </li>
+
+      <li class="entry">
+        <div class="entry__meta">
+          <span class="entry__version">v2023.06</span>
+          <span class="entry__tag entry__tag--init">start</span>
+        </div>
+        <h3 class="entry__title">Portfolio v1</h3>
+        <p class="entry__desc">
+          První verze osobního webu — statická stránka postavená od nuly
+          pro nácvik sémantického HTML a CSS gridu.
+        </p>
+        <ul class="entry__stack">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li>
+        </ul>
+        <div class="entry__links">
+          <a href="#">GitHub ↗</a>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="section section--contact" id="contact">
+    <div class="section__head">
+      <p class="eyebrow">04 · soubor</p>
+      <h2 class="mono-file">contact.sh</h2>
+    </div>
+    <div class="terminal">
+      <p class="terminal__line"><span class="prompt">jan@vala</span><span class="dim">:~$</span> ./contact</p>
+      <p class="terminal__line terminal__output">email &nbsp;&nbsp;<a href="mailto:jan@example.com">jan@example.com</a></p>
+      <p class="terminal__line terminal__output">github &nbsp;<a href="https://github.com/Vala-Jan" target="_blank" rel="noopener">github.com/Vala-Jan</a></p>
+      <p class="terminal__line terminal__output">linked &nbsp;<a href="#" target="_blank" rel="noopener">linkedin.com/in/jan-vala</a></p>
+      <p class="terminal__line"><span class="cursor" aria-hidden="true">▌</span></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Jan Vala · postaveno s HTML, CSS a trochou kávy</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
