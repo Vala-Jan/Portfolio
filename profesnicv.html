@@ -18,25 +18,42 @@
     <a href="index.html#about">O mně</a>
     <a href="index.html#projects">Projekty</a>
     <a href="studium.html">Studium</a>
-    <a href="cv.html" class="is-active" aria-current="page">Profesní CV</a>
+    <a href="profesnicv.html" class="is-active" aria-current="page">Profesní CV</a>
   </div>
 </nav>
 
 <main>
   <section class="section" style="padding-top: 1.5rem;">
-    <div class="section__head">
+    <div class="section__head" style="justify-content: center; text-align: center;">
       <h2 class="mono-file">Profesní CV</h2>
     </div>
     <div id="cvPages" class="cv__pages" aria-label="Životopis Jan Vala"></div>
-    <p class="cv__dl"><a href="uploads/CV_Vala.pdf" download>Stáhnout CV (PDF)</a></p>
+    <p class="cv__dl"><a id="cvDownload" href="uploads/CV-JanVala.pdf" download="CV_JanVala.pdf">Stáhnout CV (PDF)</a></p>
   </section>
 </main>
 <script type="module">
 import * as pdfjs from "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.4.168/build/pdf.min.mjs";
 pdfjs.GlobalWorkerOptions.workerSrc = "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.4.168/build/pdf.worker.min.mjs";
+const SRC = "uploads/CV-JanVala.pdf";
 const host = document.getElementById("cvPages");
+document.getElementById("cvDownload").addEventListener("click", async (e) => {
+  e.preventDefault();
+  try {
+    const blob = await (await fetch(SRC)).blob();
+    const url = URL.createObjectURL(new Blob([blob], { type: "application/pdf" }));
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "CV_JanVala.pdf";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 2000);
+  } catch (err) {
+    window.location.href = SRC;
+  }
+});
 try {
-  const buf = await (await fetch("uploads/CV_Vala.pdf")).arrayBuffer();
+  const buf = await (await fetch(SRC)).arrayBuffer();
   const doc = await pdfjs.getDocument({ data: new Uint8Array(buf) }).promise;
   for (let i = 1; i <= doc.numPages; i++) {
     const page = await doc.getPage(i);

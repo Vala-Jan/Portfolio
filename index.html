@@ -19,7 +19,7 @@
     <a href="#about">O mně</a>
     <a href="#projects">Projekty</a>
     <a href="studium.html">Studium</a>
-    <a href="cv.html">Profesní CV</a>
+    <a href="profesnicv.html">Profesní CV</a>
   </div>
 </nav>
 
@@ -36,12 +36,10 @@
     <div class="hero__row">
     <div class="hero__col">
     <p id="about" class="hero__statement">Zajímají mě data, automatizace, digitalizace a&nbsp;kulturní dědictví</p>
-    <div class="hero__code codeflow" aria-hidden="true">
-      <div class="codeflow__row" style="--d:38s"><span><span class="tk-k">import</span> <span class="tk-v">pandas</span> <span class="tk-k">as</span> <span class="tk-v">pd</span><span class="tk-c">  ·  </span><span class="tk-v">df</span> = <span class="tk-v">pd</span>.<span class="tk-f">read_csv</span>(<span class="tk-s">"sbirka_mzm.csv"</span>)<span class="tk-c">  ·  </span><span class="tk-v">df</span> = <span class="tk-v">df</span>.<span class="tk-f">dropna</span>(<span class="tk-v">subset</span>=[<span class="tk-s">"inv_cislo"</span>])<span class="tk-c">  ·  </span><span class="tk-k">import</span> <span class="tk-v">pandas</span> <span class="tk-k">as</span> <span class="tk-v">pd</span><span class="tk-c">  ·  </span><span class="tk-v">df</span> = <span class="tk-v">pd</span>.<span class="tk-f">read_csv</span>(<span class="tk-s">"sbirka_mzm.csv"</span>)<span class="tk-c">  ·  </span><span class="tk-v">df</span> = <span class="tk-v">df</span>.<span class="tk-f">dropna</span>(<span class="tk-v">subset</span>=[<span class="tk-s">"inv_cislo"</span>])<span class="tk-c">  ·  </span></span><span aria-hidden="true"><span class="tk-k">import</span> <span class="tk-v">pandas</span> <span class="tk-k">as</span> <span class="tk-v">pd</span><span class="tk-c">  ·  </span><span class="tk-v">df</span> = <span class="tk-v">pd</span>.<span class="tk-f">read_csv</span>(<span class="tk-s">"sbirka_mzm.csv"</span>)<span class="tk-c">  ·  </span><span class="tk-v">df</span> = <span class="tk-v">df</span>.<span class="tk-f">dropna</span>(<span class="tk-v">subset</span>=[<span class="tk-s">"inv_cislo"</span>])<span class="tk-c">  ·  </span><span class="tk-k">import</span> <span class="tk-v">pandas</span> <span class="tk-k">as</span> <span class="tk-v">pd</span><span class="tk-c">  ·  </span><span class="tk-v">df</span> = <span class="tk-v">pd</span>.<span class="tk-f">read_csv</span>(<span class="tk-s">"sbirka_mzm.csv"</span>)<span class="tk-c">  ·  </span><span class="tk-v">df</span> = <span class="tk-v">df</span>.<span class="tk-f">dropna</span>(<span class="tk-v">subset</span>=[<span class="tk-s">"inv_cislo"</span>])<span class="tk-c">  ·  </span></span></div>
-      <div class="codeflow__row" style="--d:52s"><span><span class="tk-k">SELECT</span> <span class="tk-v">obor</span>, <span class="tk-f">COUNT</span>(*) <span class="tk-k">AS</span> <span class="tk-v">pocet</span> <span class="tk-k">FROM</span> <span class="tk-v">predmety</span> <span class="tk-k">WHERE</span> <span class="tk-v">digitalizovano</span> = <span class="tk-n">1</span> <span class="tk-k">GROUP BY</span> <span class="tk-v">obor</span> <span class="tk-k">ORDER BY</span> <span class="tk-v">pocet</span> <span class="tk-k">DESC</span>;<span class="tk-c">  ·  </span><span class="tk-k">SELECT</span> <span class="tk-v">obor</span>, <span class="tk-f">COUNT</span>(*) <span class="tk-k">AS</span> <span class="tk-v">pocet</span> <span class="tk-k">FROM</span> <span class="tk-v">predmety</span> <span class="tk-k">WHERE</span> <span class="tk-v">digitalizovano</span> = <span class="tk-n">1</span> <span class="tk-k">GROUP BY</span> <span class="tk-v">obor</span> <span class="tk-k">ORDER BY</span> <span class="tk-v">pocet</span> <span class="tk-k">DESC</span>;<span class="tk-c">  ·  </span></span><span aria-hidden="true"><span class="tk-k">SELECT</span> <span class="tk-v">obor</span>, <span class="tk-f">COUNT</span>(*) <span class="tk-k">AS</span> <span class="tk-v">pocet</span> <span class="tk-k">FROM</span> <span class="tk-v">predmety</span> <span class="tk-k">WHERE</span> <span class="tk-v">digitalizovano</span> = <span class="tk-n">1</span> <span class="tk-k">GROUP BY</span> <span class="tk-v">obor</span> <span class="tk-k">ORDER BY</span> <span class="tk-v">pocet</span> <span class="tk-k">DESC</span>;<span class="tk-c">  ·  </span><span class="tk-k">SELECT</span> <span class="tk-v">obor</span>, <span class="tk-f">COUNT</span>(*) <span class="tk-k">AS</span> <span class="tk-v">pocet</span> <span class="tk-k">FROM</span> <span class="tk-v">predmety</span> <span class="tk-k">WHERE</span> <span class="tk-v">digitalizovano</span> = <span class="tk-n">1</span> <span class="tk-k">GROUP BY</span> <span class="tk-v">obor</span> <span class="tk-k">ORDER BY</span> <span class="tk-v">pocet</span> <span class="tk-k">DESC</span>;<span class="tk-c">  ·  </span></span></div>
-      <div class="codeflow__row" style="--d:44s"><span><span class="tk-v">mesh</span> = <span class="tk-v">trimesh</span>.<span class="tk-f">load</span>(<span class="tk-s">"byk_scan.glb"</span>)<span class="tk-c">  ·  </span><span class="tk-v">mesh</span>.<span class="tk-f">export</span>(<span class="tk-s">"byk_web.glb"</span>)<span class="tk-c">  ·  </span><span class="tk-k">for</span> <span class="tk-v">img</span> <span class="tk-k">in</span> <span class="tk-v">tiff_batch</span>: <span class="tk-f">convert</span>(<span class="tk-v">img</span>, <span class="tk-v">dpi</span>=<span class="tk-n">2400</span>)<span class="tk-c">  ·  </span><span class="tk-v">mesh</span> = <span class="tk-v">trimesh</span>.<span class="tk-f">load</span>(<span class="tk-s">"byk_scan.glb"</span>)<span class="tk-c">  ·  </span><span class="tk-v">mesh</span>.<span class="tk-f">export</span>(<span class="tk-s">"byk_web.glb"</span>)<span class="tk-c">  ·  </span><span class="tk-k">for</span> <span class="tk-v">img</span> <span class="tk-k">in</span> <span class="tk-v">tiff_batch</span>: <span class="tk-f">convert</span>(<span class="tk-v">img</span>, <span class="tk-v">dpi</span>=<span class="tk-n">2400</span>)<span class="tk-c">  ·  </span></span><span aria-hidden="true"><span class="tk-v">mesh</span> = <span class="tk-v">trimesh</span>.<span class="tk-f">load</span>(<span class="tk-s">"byk_scan.glb"</span>)<span class="tk-c">  ·  </span><span class="tk-v">mesh</span>.<span class="tk-f">export</span>(<span class="tk-s">"byk_web.glb"</span>)<span class="tk-c">  ·  </span><span class="tk-k">for</span> <span class="tk-v">img</span> <span class="tk-k">in</span> <span class="tk-v">tiff_batch</span>: <span class="tk-f">convert</span>(<span class="tk-v">img</span>, <span class="tk-v">dpi</span>=<span class="tk-n">2400</span>)<span class="tk-c">  ·  </span><span class="tk-v">mesh</span> = <span class="tk-v">trimesh</span>.<span class="tk-f">load</span>(<span class="tk-s">"byk_scan.glb"</span>)<span class="tk-c">  ·  </span><span class="tk-v">mesh</span>.<span class="tk-f">export</span>(<span class="tk-s">"byk_web.glb"</span>)<span class="tk-c">  ·  </span><span class="tk-k">for</span> <span class="tk-v">img</span> <span class="tk-k">in</span> <span class="tk-v">tiff_batch</span>: <span class="tk-f">convert</span>(<span class="tk-v">img</span>, <span class="tk-v">dpi</span>=<span class="tk-n">2400</span>)<span class="tk-c">  ·  </span></span></div>
+    <div class="hero__pair">
+      <div class="hero__code codeflow codeflow--v" aria-hidden="true"><div class="codeflow__track"><div class="codeflow__line"><span class="tk-c"># load dataset</span></div><div class="codeflow__line"><span class="tk-k">import</span> <span class="tk-v">pandas</span> <span class="tk-k">as</span> <span class="tk-v">pd</span></div><div class="codeflow__line"><span class="tk-v">df</span> = <span class="tk-v">pd</span>.<span class="tk-f">read_csv</span>(<span class="tk-s">"records.csv"</span>)</div><div class="codeflow__line"><span class="tk-v">df</span> = <span class="tk-v">df</span>.<span class="tk-f">dropna</span>(<span class="tk-v">subset</span>=[<span class="tk-s">"id"</span>])</div><div class="codeflow__line">&nbsp;</div><div class="codeflow__line"><span class="tk-c">-- summary</span></div><div class="codeflow__line"><span class="tk-k">SELECT</span> <span class="tk-v">category</span>, <span class="tk-f">COUNT</span>(*) <span class="tk-k">AS</span> <span class="tk-v">total</span></div><div class="codeflow__line"><span class="tk-k">FROM</span> <span class="tk-v">items</span> <span class="tk-k">WHERE</span> <span class="tk-v">status</span> = <span class="tk-n">1</span></div><div class="codeflow__line"><span class="tk-k">GROUP BY</span> <span class="tk-v">category</span> <span class="tk-k">ORDER BY</span> <span class="tk-v">total</span> <span class="tk-k">DESC</span>;</div><div class="codeflow__line">&nbsp;</div><div class="codeflow__line"><span class="tk-c"># batch process</span></div><div class="codeflow__line"><span class="tk-v">model</span> = <span class="tk-v">loader</span>.<span class="tk-f">load</span>(<span class="tk-s">"input.glb"</span>)</div><div class="codeflow__line"><span class="tk-v">model</span>.<span class="tk-f">export</span>(<span class="tk-s">"output.glb"</span>)</div><div class="codeflow__line"><span class="tk-k">for</span> <span class="tk-v">file</span> <span class="tk-k">in</span> <span class="tk-v">batch</span>:</div><div class="codeflow__line">    <span class="tk-f">convert</span>(<span class="tk-v">file</span>, <span class="tk-v">dpi</span>=<span class="tk-n">600</span>)</div><div class="codeflow__line">&nbsp;</div><div class="codeflow__line"><span class="tk-c"># load dataset</span></div><div class="codeflow__line"><span class="tk-k">import</span> <span class="tk-v">pandas</span> <span class="tk-k">as</span> <span class="tk-v">pd</span></div><div class="codeflow__line"><span class="tk-v">df</span> = <span class="tk-v">pd</span>.<span class="tk-f">read_csv</span>(<span class="tk-s">"records.csv"</span>)</div><div class="codeflow__line"><span class="tk-v">df</span> = <span class="tk-v">df</span>.<span class="tk-f">dropna</span>(<span class="tk-v">subset</span>=[<span class="tk-s">"id"</span>])</div><div class="codeflow__line">&nbsp;</div><div class="codeflow__line"><span class="tk-c">-- summary</span></div><div class="codeflow__line"><span class="tk-k">SELECT</span> <span class="tk-v">category</span>, <span class="tk-f">COUNT</span>(*) <span class="tk-k">AS</span> <span class="tk-v">total</span></div><div class="codeflow__line"><span class="tk-k">FROM</span> <span class="tk-v">items</span> <span class="tk-k">WHERE</span> <span class="tk-v">status</span> = <span class="tk-n">1</span></div><div class="codeflow__line"><span class="tk-k">GROUP BY</span> <span class="tk-v">category</span> <span class="tk-k">ORDER BY</span> <span class="tk-v">total</span> <span class="tk-k">DESC</span>;</div><div class="codeflow__line">&nbsp;</div><div class="codeflow__line"><span class="tk-c"># batch process</span></div><div class="codeflow__line"><span class="tk-v">model</span> = <span class="tk-v">loader</span>.<span class="tk-f">load</span>(<span class="tk-s">"input.glb"</span>)</div><div class="codeflow__line"><span class="tk-v">model</span>.<span class="tk-f">export</span>(<span class="tk-s">"output.glb"</span>)</div><div class="codeflow__line"><span class="tk-k">for</span> <span class="tk-v">file</span> <span class="tk-k">in</span> <span class="tk-v">batch</span>:</div><div class="codeflow__line">    <span class="tk-f">convert</span>(<span class="tk-v">file</span>, <span class="tk-v">dpi</span>=<span class="tk-n">600</span>)</div><div class="codeflow__line">&nbsp;</div><div class="codeflow__line"><span class="tk-c"># load dataset</span></div><div class="codeflow__line"><span class="tk-k">import</span> <span class="tk-v">pandas</span> <span class="tk-k">as</span> <span class="tk-v">pd</span></div><div class="codeflow__line"><span class="tk-v">df</span> = <span class="tk-v">pd</span>.<span class="tk-f">read_csv</span>(<span class="tk-s">"records.csv"</span>)</div><div class="codeflow__line"><span class="tk-v">df</span> = <span class="tk-v">df</span>.<span class="tk-f">dropna</span>(<span class="tk-v">subset</span>=[<span class="tk-s">"id"</span>])</div><div class="codeflow__line">&nbsp;</div><div class="codeflow__line"><span class="tk-c">-- summary</span></div><div class="codeflow__line"><span class="tk-k">SELECT</span> <span class="tk-v">category</span>, <span class="tk-f">COUNT</span>(*) <span class="tk-k">AS</span> <span class="tk-v">total</span></div><div class="codeflow__line"><span class="tk-k">FROM</span> <span class="tk-v">items</span> <span class="tk-k">WHERE</span> <span class="tk-v">status</span> = <span class="tk-n">1</span></div><div class="codeflow__line"><span class="tk-k">GROUP BY</span> <span class="tk-v">category</span> <span class="tk-k">ORDER BY</span> <span class="tk-v">total</span> <span class="tk-k">DESC</span>;</div><div class="codeflow__line">&nbsp;</div><div class="codeflow__line"><span class="tk-c"># batch process</span></div><div class="codeflow__line"><span class="tk-v">model</span> = <span class="tk-v">loader</span>.<span class="tk-f">load</span>(<span class="tk-s">"input.glb"</span>)</div><div class="codeflow__line"><span class="tk-v">model</span>.<span class="tk-f">export</span>(<span class="tk-s">"output.glb"</span>)</div><div class="codeflow__line"><span class="tk-k">for</span> <span class="tk-v">file</span> <span class="tk-k">in</span> <span class="tk-v">batch</span>:</div><div class="codeflow__line">    <span class="tk-f">convert</span>(<span class="tk-v">file</span>, <span class="tk-v">dpi</span>=<span class="tk-n">600</span>)</div><div class="codeflow__line">&nbsp;</div><div class="codeflow__line"><span class="tk-c"># load dataset</span></div><div class="codeflow__line"><span class="tk-k">import</span> <span class="tk-v">pandas</span> <span class="tk-k">as</span> <span class="tk-v">pd</span></div><div class="codeflow__line"><span class="tk-v">df</span> = <span class="tk-v">pd</span>.<span class="tk-f">read_csv</span>(<span class="tk-s">"records.csv"</span>)</div><div class="codeflow__line"><span class="tk-v">df</span> = <span class="tk-v">df</span>.<span class="tk-f">dropna</span>(<span class="tk-v">subset</span>=[<span class="tk-s">"id"</span>])</div><div class="codeflow__line">&nbsp;</div><div class="codeflow__line"><span class="tk-c">-- summary</span></div><div class="codeflow__line"><span class="tk-k">SELECT</span> <span class="tk-v">category</span>, <span class="tk-f">COUNT</span>(*) <span class="tk-k">AS</span> <span class="tk-v">total</span></div><div class="codeflow__line"><span class="tk-k">FROM</span> <span class="tk-v">items</span> <span class="tk-k">WHERE</span> <span class="tk-v">status</span> = <span class="tk-n">1</span></div><div class="codeflow__line"><span class="tk-k">GROUP BY</span> <span class="tk-v">category</span> <span class="tk-k">ORDER BY</span> <span class="tk-v">total</span> <span class="tk-k">DESC</span>;</div><div class="codeflow__line">&nbsp;</div><div class="codeflow__line"><span class="tk-c"># batch process</span></div><div class="codeflow__line"><span class="tk-v">model</span> = <span class="tk-v">loader</span>.<span class="tk-f">load</span>(<span class="tk-s">"input.glb"</span>)</div><div class="codeflow__line"><span class="tk-v">model</span>.<span class="tk-f">export</span>(<span class="tk-s">"output.glb"</span>)</div><div class="codeflow__line"><span class="tk-k">for</span> <span class="tk-v">file</span> <span class="tk-k">in</span> <span class="tk-v">batch</span>:</div><div class="codeflow__line">    <span class="tk-f">convert</span>(<span class="tk-v">file</span>, <span class="tk-v">dpi</span>=<span class="tk-n">600</span>)</div><div class="codeflow__line">&nbsp;</div></div></div>
+      <div class="hero__sub"><p>Studuji navazující magisterský program na KISKu. Mám vystudovanou estetiku a&nbsp;pedagogiku, osud mě ale nakonec zavál k&nbsp;datům, digitalizaci a&nbsp;technologiím v&nbsp;oblasti kulturního dědictví. Pracuji na digitalizačním pracovišti druhé největší muzejní instituce v&nbsp;České republice (MZM), kde se věnuji 2D a&nbsp;3D digitalizaci, podpoře odborné činnosti a&nbsp;zpracování digitálních dat.</p><p>Od studia na KISKu očekávám získání teoretického i&nbsp;praktického rámce pro práci s&nbsp;daty a&nbsp;digitálními sbírkami. Mým cílem je prohloubit své datové dovednosti a&nbsp;stát se plnohodnotným datovým kurátorem a&nbsp;analytikem.</p></div>
     </div>
-    <p class="hero__sub">Studuji navazující magisterský program na KISKu. Mám vystudovanou estetiku a&nbsp;pedagogiku, osud mě ale nakonec zavál k&nbsp;datům, digitalizaci a&nbsp;technologiím v&nbsp;oblasti kulturního dědictví. Pracuji na digitalizačním pracovišti druhé největší muzejní instituce v&nbsp;České republice (MZM), kde se věnuji 2D a&nbsp;3D digitalizaci, podpoře odborné činnosti a&nbsp;zpracování digitálních dat. Mým cílem je prohloubit své datové dovednosti, stát se plnohodnotným datovým kurátorem a&nbsp;analytikem.</p>
     </div>
     </div>
   </header>
@@ -57,13 +55,13 @@
       <li class="entry">
         <h3 class="entry__title">3D Galerie objektů</h3>
         <p class="entry__desc">
-          Dotyková interaktivní aplikace pro prezentační či výstavní účely.
+          Desktopová appka pro dotykovou obrazovku (TV/monitor) v&nbsp;muzeu, bez připojení k&nbsp;internetu. Návštěvníci si z&nbsp;přehledu vyberou exponát a&nbsp;prstem si s&nbsp;jeho 3D modelem mohou volně otáčet, přibližovat a&nbsp;oddalovat. Otestováno, je potřeba dodělat kioskový mód, aby appka nešla vypnout.
         </p>
         <ul class="entry__stack">
-          <li>React</li><li>Node.js</li><li>PostgreSQL</li><li>WebSocket</li>
+          <li>Three.js</li><li>Electron</li><li>glTF / GLB</li>
         </ul>
         <div class="entry__links">
-          <a href="#">GitHub ↗</a>
+          <a href="https://github.com/Vala-Jan/3D-Gallery" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </li>
 
@@ -94,36 +92,6 @@
           <a href="#">GitHub ↗</a>
         </div>
       </li>
-      <li class="entry">
-        <h3 class="entry__title">Projekt — doplnit</h3>
-        <p class="entry__desc">Popis projektu doplň zde.</p>
-        <ul class="entry__stack">
-          <li>Stack</li>
-        </ul>
-        <div class="entry__links">
-          <a href="#">GitHub ↗</a>
-        </div>
-      </li>
-      <li class="entry">
-        <h3 class="entry__title">Projekt — doplnit</h3>
-        <p class="entry__desc">Popis projektu doplň zde.</p>
-        <ul class="entry__stack">
-          <li>Stack</li>
-        </ul>
-        <div class="entry__links">
-          <a href="#">GitHub ↗</a>
-        </div>
-      </li>
-      <li class="entry">
-        <h3 class="entry__title">Projekt — doplnit</h3>
-        <p class="entry__desc">Popis projektu doplň zde.</p>
-        <ul class="entry__stack">
-          <li>Stack</li>
-        </ul>
-        <div class="entry__links">
-          <a href="#">GitHub ↗</a>
-        </div>
-      </li>
     </ol>
   </section>
 
@@ -131,7 +99,7 @@
 </main>
 
 <footer class="footer">
-  <p>© <span id="year"></span> Jan Vala · postaveno s HTML, CSS a trochou kávy</p>
+  <p style="opacity: 0.35; font-size: 0.8rem;">© 2026 Jan Vala. All Rights Reserved.</p>
 </footer>
 
 <script src="script.js"></script>
@@ -146,12 +114,18 @@
   });
   const setActive = (i) => links.forEach((a, j) => a.classList.toggle('is-active', j === i));
   const update = () => {
-    const line = window.innerHeight * 0.35;
+    const line = window.innerHeight * 0.6;
     let idx = 0;
-    targets.forEach((el, i) => { if (el && el.getBoundingClientRect().top <= line) idx = i; });
+    targets.forEach((el, i) => { if (el && el !== targets[0] && el.getBoundingClientRect().top <= line) idx = i; });
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+      const last = targets.reduce((acc, el, i) => (el && el !== targets[0] ? i : acc), idx);
+      idx = last;
+    }
     setActive(idx);
   };
   links.forEach((a, i) => a.addEventListener('click', () => setActive(i)));
+  addEventListener('load', update);
+  if ('ResizeObserver' in window) new ResizeObserver(update).observe(document.body);
   addEventListener('scroll', update, { passive: true });
   addEventListener('resize', update);
   update();
