@@ -14,7 +14,7 @@
 <body>
 
 <nav class="nav">
-  <h1 class="hero__name" aria-label="Jan Vala" data-home style="cursor:pointer"><span class="hero__line hero__line--before" aria-hidden="true"></span><span class="hero__word" aria-hidden="true"><span class="ch" style="--i:0">J</span><span class="ch" style="--i:1">a</span><span class="ch" style="--i:2">n</span></span> <span class="hero__word" aria-hidden="true"><span class="ch" style="--i:3">V</span><span class="ch" style="--i:4">a</span><span class="ch" style="--i:5">l</span><span class="ch" style="--i:6">a</span></span><span class="hero__line" aria-hidden="true"></span></h1>
+  <h1 class="hero__name" data-home><span class="hero__line hero__line--before" aria-hidden="true"></span>Jan Vala<span class="hero__line" aria-hidden="true"></span></h1>
   <div class="nav__cats">
     <a href="./" data-view="home" data-target="about">O mně</a>
     <a href="./" data-view="home" data-target="projects">Projekty</a>
@@ -23,192 +23,196 @@
   </div>
 </nav>
 
-<main id="top">
-<div data-panel="home">
-
-  <header class="hero">
-    <div class="hero__left">
-    <figure class="hero__photo">
-      <div class="hero__photo-line"><div class="hero__photo-inner"><img src="uploads/pasted-1790348372441-0.png" alt="Jan Vala u počítače, vedle 3D skener ZEISS snímá sošku býka na otočném talíři"></div></div>
-    </figure>
-    <a class="hero__mail" href="mailto:551953@mail.muni.cz"><svg class="hero__mail-icon" viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"/></svg><span>551953@mail.muni.cz</span></a>
-    </div>
-    <div class="hero__row">
-    <div class="hero__col">
-    <p id="about" class="hero__statement">Zajímají mě data, automatizace, digitalizace a&nbsp;kulturní dědictví</p>
-    <div class="hero__pair">
-      <div class="hero__code codeflow codeflow--v" aria-hidden="true"><div class="codeflow__track"><div class="codeflow__line"><span class="tk-c"># load dataset</span></div><div class="codeflow__line"><span class="tk-k">import</span> <span class="tk-v">pandas</span> <span class="tk-k">as</span> <span class="tk-v">pd</span></div><div class="codeflow__line"><span class="tk-v">df</span> = <span class="tk-v">pd</span>.<span class="tk-f">read_csv</span>(<span class="tk-s">"records.csv"</span>)</div><div class="codeflow__line"><span class="tk-v">df</span> = <span class="tk-v">df</span>.<span class="tk-f">dropna</span>(<span class="tk-v">subset</span>=[<span class="tk-s">"id"</span>])</div><div class="codeflow__line">&nbsp;</div><div class="codeflow__line"><span class="tk-c">-- summary</span></div><div class="codeflow__line"><span class="tk-k">SELECT</span> <span class="tk-v">category</span>, <span class="tk-f">COUNT</span>(*) <span class="tk-k">AS</span> <span class="tk-v">total</span></div><div class="codeflow__line"><span class="tk-k">FROM</span> <span class="tk-v">items</span> <span class="tk-k">WHERE</span> <span class="tk-v">status</span> = <span class="tk-n">1</span></div><div class="codeflow__line"><span class="tk-k">GROUP BY</span> <span class="tk-v">category</span> <span class="tk-k">ORDER BY</span> <span class="tk-v">total</span> <span class="tk-k">DESC</span>;</div><div class="codeflow__line">&nbsp;</div><div class="codeflow__line"><span class="tk-c"># batch process</span></div><div class="codeflow__line"><span class="tk-v">model</span> = <span class="tk-v">loader</span>.<span class="tk-f">load</span>(<span class="tk-s">"input.glb"</span>)</div><div class="codeflow__line"><span class="tk-v">model</span>.<span class="tk-f">export</span>(<span class="tk-s">"output.glb"</span>)</div><div class="codeflow__line"><span class="tk-k">for</span> <span class="tk-v">file</span> <span class="tk-k">in</span> <span class="tk-v">batch</span>:</div><div class="codeflow__line">    <span class="tk-f">convert</span>(<span class="tk-v">file</span>, <span class="tk-v">dpi</span>=<span class="tk-n">600</span>)</div><div class="codeflow__line">&nbsp;</div><div class="codeflow__line"><span class="tk-c"># load dataset</span></div><div class="codeflow__line"><span class="tk-k">import</span> <span class="tk-v">pandas</span> <span class="tk-k">as</span> <span class="tk-v">pd</span></div><div class="codeflow__line"><span class="tk-v">df</span> = <span class="tk-v">pd</span>.<span class="tk-f">read_csv</span>(<span class="tk-s">"records.csv"</span>)</div><div class="codeflow__line"><span class="tk-v">df</span> = <span class="tk-v">df</span>.<span class="tk-f">dropna</span>(<span class="tk-v">subset</span>=[<span class="tk-s">"id"</span>])</div><div class="codeflow__line">&nbsp;</div><div class="codeflow__line"><span class="tk-c">-- summary</span></div><div class="codeflow__line"><span class="tk-k">SELECT</span> <span class="tk-v">category</span>, <span class="tk-f">COUNT</span>(*) <span class="tk-k">AS</span> <span class="tk-v">total</span></div><div class="codeflow__line"><span class="tk-k">FROM</span> <span class="tk-v">items</span> <span class="tk-k">WHERE</span> <span class="tk-v">status</span> = <span class="tk-n">1</span></div><div class="codeflow__line"><span class="tk-k">GROUP BY</span> <span class="tk-v">category</span> <span class="tk-k">ORDER BY</span> <span class="tk-v">total</span> <span class="tk-k">DESC</span>;</div><div class="codeflow__line">&nbsp;</div><div class="codeflow__line"><span class="tk-c"># batch process</span></div><div class="codeflow__line"><span class="tk-v">model</span> = <span class="tk-v">loader</span>.<span class="tk-f">load</span>(<span class="tk-s">"input.glb"</span>)</div><div class="codeflow__line"><span class="tk-v">model</span>.<span class="tk-f">export</span>(<span class="tk-s">"output.glb"</span>)</div><div class="codeflow__line"><span class="tk-k">for</span> <span class="tk-v">file</span> <span class="tk-k">in</span> <span class="tk-v">batch</span>:</div><div class="codeflow__line">    <span class="tk-f">convert</span>(<span class="tk-v">file</span>, <span class="tk-v">dpi</span>=<span class="tk-n">600</span>)</div><div class="codeflow__line">&nbsp;</div><div class="codeflow__line"><span class="tk-c"># load dataset</span></div><div class="codeflow__line"><span class="tk-k">import</span> <span class="tk-v">pandas</span> <span class="tk-k">as</span> <span class="tk-v">pd</span></div><div class="codeflow__line"><span class="tk-v">df</span> = <span class="tk-v">pd</span>.<span class="tk-f">read_csv</span>(<span class="tk-s">"records.csv"</span>)</div><div class="codeflow__line"><span class="tk-v">df</span> = <span class="tk-v">df</span>.<span class="tk-f">dropna</span>(<span class="tk-v">subset</span>=[<span class="tk-s">"id"</span>])</div><div class="codeflow__line">&nbsp;</div><div class="codeflow__line"><span class="tk-c">-- summary</span></div><div class="codeflow__line"><span class="tk-k">SELECT</span> <span class="tk-v">category</span>, <span class="tk-f">COUNT</span>(*) <span class="tk-k">AS</span> <span class="tk-v">total</span></div><div class="codeflow__line"><span class="tk-k">FROM</span> <span class="tk-v">items</span> <span class="tk-k">WHERE</span> <span class="tk-v">status</span> = <span class="tk-n">1</span></div><div class="codeflow__line"><span class="tk-k">GROUP BY</span> <span class="tk-v">category</span> <span class="tk-k">ORDER BY</span> <span class="tk-v">total</span> <span class="tk-k">DESC</span>;</div><div class="codeflow__line">&nbsp;</div><div class="codeflow__line"><span class="tk-c"># batch process</span></div><div class="codeflow__line"><span class="tk-v">model</span> = <span class="tk-v">loader</span>.<span class="tk-f">load</span>(<span class="tk-s">"input.glb"</span>)</div><div class="codeflow__line"><span class="tk-v">model</span>.<span class="tk-f">export</span>(<span class="tk-s">"output.glb"</span>)</div><div class="codeflow__line"><span class="tk-k">for</span> <span class="tk-v">file</span> <span class="tk-k">in</span> <span class="tk-v">batch</span>:</div><div class="codeflow__line">    <span class="tk-f">convert</span>(<span class="tk-v">file</span>, <span class="tk-v">dpi</span>=<span class="tk-n">600</span>)</div><div class="codeflow__line">&nbsp;</div><div class="codeflow__line"><span class="tk-c"># load dataset</span></div><div class="codeflow__line"><span class="tk-k">import</span> <span class="tk-v">pandas</span> <span class="tk-k">as</span> <span class="tk-v">pd</span></div><div class="codeflow__line"><span class="tk-v">df</span> = <span class="tk-v">pd</span>.<span class="tk-f">read_csv</span>(<span class="tk-s">"records.csv"</span>)</div><div class="codeflow__line"><span class="tk-v">df</span> = <span class="tk-v">df</span>.<span class="tk-f">dropna</span>(<span class="tk-v">subset</span>=[<span class="tk-s">"id"</span>])</div><div class="codeflow__line">&nbsp;</div><div class="codeflow__line"><span class="tk-c">-- summary</span></div><div class="codeflow__line"><span class="tk-k">SELECT</span> <span class="tk-v">category</span>, <span class="tk-f">COUNT</span>(*) <span class="tk-k">AS</span> <span class="tk-v">total</span></div><div class="codeflow__line"><span class="tk-k">FROM</span> <span class="tk-v">items</span> <span class="tk-k">WHERE</span> <span class="tk-v">status</span> = <span class="tk-n">1</span></div><div class="codeflow__line"><span class="tk-k">GROUP BY</span> <span class="tk-v">category</span> <span class="tk-k">ORDER BY</span> <span class="tk-v">total</span> <span class="tk-k">DESC</span>;</div><div class="codeflow__line">&nbsp;</div><div class="codeflow__line"><span class="tk-c"># batch process</span></div><div class="codeflow__line"><span class="tk-v">model</span> = <span class="tk-v">loader</span>.<span class="tk-f">load</span>(<span class="tk-s">"input.glb"</span>)</div><div class="codeflow__line"><span class="tk-v">model</span>.<span class="tk-f">export</span>(<span class="tk-s">"output.glb"</span>)</div><div class="codeflow__line"><span class="tk-k">for</span> <span class="tk-v">file</span> <span class="tk-k">in</span> <span class="tk-v">batch</span>:</div><div class="codeflow__line">    <span class="tk-f">convert</span>(<span class="tk-v">file</span>, <span class="tk-v">dpi</span>=<span class="tk-n">600</span>)</div><div class="codeflow__line">&nbsp;</div></div></div>
-      <div class="hero__sub"><p>Studuji navazující magisterský program na KISKu. Mám vystudovanou estetiku a&nbsp;pedagogiku, osud mě ale nakonec zavál k&nbsp;datům, digitalizaci a&nbsp;technologiím v&nbsp;oblasti kulturního dědictví. Pracuji na digitalizačním pracovišti druhé největší muzejní instituce v&nbsp;České republice (MZM), kde se věnuji 2D a&nbsp;3D digitalizaci, podpoře odborné činnosti a&nbsp;zpracování digitálních dat.</p><p>Od studia na KISKu očekávám získání teoretického i&nbsp;praktického rámce pro práci s&nbsp;daty a&nbsp;digitálními sbírkami. Mým cílem je prohloubit své datové dovednosti a&nbsp;stát se plnohodnotným datovým kurátorem a&nbsp;analytikem.</p></div>
-    </div>
-    </div>
-    </div>
-  </header>
-
-
-
-  <section class="section" id="projects">
-    <div class="section__head">
-      <h2 class="mono-file">Projekty</h2>
-    </div>
-
-    <ol class="changelog">
-      <li class="entry">
-        <h3 class="entry__title">3D Galerie objektů</h3>
-        <p class="entry__desc">
-          Desktopová appka pro dotykovou obrazovku (TV/monitor) v&nbsp;muzeu, bez připojení k&nbsp;internetu. Návštěvníci si z&nbsp;přehledu vyberou exponát a&nbsp;prstem si s&nbsp;jeho 3D modelem mohou volně otáčet, přibližovat a&nbsp;oddalovat. Otestováno, je potřeba dodělat kioskový mód, aby appka nešla vypnout.
-        </p>
-        <ul class="entry__stack">
-          <li>Three.js</li><li>Electron</li><li>glTF / GLB</li>
-        </ul>
-        <div class="entry__links">
-          <a href="https://github.com/Vala-Jan/3D-Gallery" target="_blank" rel="noopener">GitHub ↗</a>
-        </div>
-      </li>
-
-      <li class="entry">
-        <h3 class="entry__title">WeatherNow — předpověď počasí</h3>
-        <p class="entry__desc">
-          Rychlá progresivní webová aplikace nad veřejným API s offline
-          podporou a personalizovanými lokacemi.
-        </p>
-        <ul class="entry__stack">
-          <li>TypeScript</li><li>Vite</li><li>Public API</li>
-        </ul>
-        <div class="entry__links">
-          <a href="#">GitHub ↗</a>
-        </div>
-      </li>
-
-      <li class="entry">
-        <h3 class="entry__title">Portfolio v1</h3>
-        <p class="entry__desc">
-          První verze osobního webu — statická stránka postavená od nuly
-          pro nácvik sémantického HTML a CSS gridu.
-        </p>
-        <ul class="entry__stack">
-          <li>HTML</li><li>CSS</li><li>JavaScript</li>
-        </ul>
-        <div class="entry__links">
-          <a href="#">GitHub ↗</a>
-        </div>
-      </li>
-    </ol>
-  </section>
-
-
-</div>
-
-<div data-panel="studium" hidden>
-  <section class="section" style="padding-top: 1.5rem;">
-    <div class="section__head" style="justify-content: center; text-align: center;">
-      <h2 class="mono-file">Studium</h2>
-    </div>
-    <div class="sems">
-    <details class="sem">
-      <summary class="sem__head">1. semestr</summary>
-      <div class="sem__body">
-        <div class="subjs">
-          <details class="subj">
-            <summary class="subj__head">ISKM01</summary>
-            <p class="subj__body">Popis předmětu doplnit.</p>
-          </details>
-          <details class="subj">
-            <summary class="subj__head">ISKM02</summary>
-            <p class="subj__body">Popis předmětu doplnit.</p>
-          </details>
-          <details class="subj">
-            <summary class="subj__head">ISKM03</summary>
-            <p class="subj__body">Popis předmětu doplnit.</p>
-          </details>
-          <details class="subj">
-            <summary class="subj__head">ISKM04</summary>
-            <p class="subj__body">Popis předmětu doplnit.</p>
-          </details>
-          <details class="subj">
-            <summary class="subj__head">ISKB83</summary>
-            <p class="subj__body">Popis předmětu doplnit.</p>
-          </details>
-          <details class="subj">
-            <summary class="subj__head">ISKM55</summary>
-            <p class="subj__body">Popis předmětu doplnit.</p>
-          </details>
-          <details class="subj">
-            <summary class="subj__head">AI001</summary>
-            <p class="subj__body">Popis předmětu doplnit.</p>
-          </details>
+<main>
+  <div data-panel="home">
+    <header class="hero">
+      <div class="hero__left">
+        <figure class="hero__photo">
+          <img src="uploads/jan-vala.png" alt="Jan Vala u počítače, vedle 3D skener ZEISS snímá sošku býka na otočném talíři">
+        </figure>
+        <a class="hero__mail" href="mailto:551953@mail.muni.cz"><svg class="hero__mail-icon" viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"/></svg>551953@mail.muni.cz</a>
+      </div>
+      <div class="hero__col">
+        <p id="about" class="hero__statement">Zajímají mě data, automatizace, digitalizace a&nbsp;kulturní dědictví</p>
+        <div class="hero__pair">
+          <div class="hero__sub">
+            <p>Studuji navazující magisterský program na KISKu. Mám vystudovanou estetiku a&nbsp;pedagogiku, osud mě ale nakonec zavál k&nbsp;datům, digitalizaci a&nbsp;technologiím v&nbsp;oblasti kulturního dědictví. Pracuji na digitalizačním pracovišti druhé největší muzejní instituce v&nbsp;České republice (MZM), kde se věnuji 2D a&nbsp;3D digitalizaci, podpoře odborné činnosti a&nbsp;zpracování digitálních dat.</p>
+            <p>Od studia na KISKu očekávám získání teoretického i&nbsp;praktického rámce pro práci s&nbsp;daty a&nbsp;digitálními sbírkami. Mým cílem je prohloubit své datové dovednosti a&nbsp;stát se plnohodnotným datovým kurátorem a&nbsp;analytikem.</p>
+          </div>
+          <div class="codeflow" aria-hidden="true">
+            <div class="codeflow__track">
+              <div><span class="tk-c"># load dataset</span></div>
+              <div><span class="tk-k">import</span> <span class="tk-v">pandas</span> <span class="tk-k">as</span> <span class="tk-v">pd</span></div>
+              <div><span class="tk-v">df</span> = <span class="tk-v">pd</span>.<span class="tk-f">read_csv</span>(<span class="tk-s">"records.csv"</span>)</div>
+              <div><span class="tk-v">df</span> = <span class="tk-v">df</span>.<span class="tk-f">dropna</span>(<span class="tk-v">subset</span>=[<span class="tk-s">"id"</span>])</div>
+              <div>&nbsp;</div>
+              <div><span class="tk-c">-- summary</span></div>
+              <div><span class="tk-k">SELECT</span> <span class="tk-v">category</span>, <span class="tk-f">COUNT</span>(*) <span class="tk-k">AS</span> <span class="tk-v">total</span></div>
+              <div><span class="tk-k">FROM</span> <span class="tk-v">items</span> <span class="tk-k">WHERE</span> <span class="tk-v">status</span> = <span class="tk-n">1</span></div>
+              <div><span class="tk-k">GROUP BY</span> <span class="tk-v">category</span> <span class="tk-k">ORDER BY</span> <span class="tk-v">total</span> <span class="tk-k">DESC</span>;</div>
+              <div>&nbsp;</div>
+              <div><span class="tk-c"># batch process</span></div>
+              <div><span class="tk-v">model</span> = <span class="tk-v">loader</span>.<span class="tk-f">load</span>(<span class="tk-s">"input.glb"</span>)</div>
+              <div><span class="tk-v">model</span>.<span class="tk-f">export</span>(<span class="tk-s">"output.glb"</span>)</div>
+              <div><span class="tk-k">for</span> <span class="tk-v">file</span> <span class="tk-k">in</span> <span class="tk-v">batch</span>:</div>
+              <div>    <span class="tk-f">convert</span>(<span class="tk-v">file</span>, <span class="tk-v">dpi</span>=<span class="tk-n">600</span>)</div>
+              <div>&nbsp;</div>
+            </div>
+          </div>
         </div>
       </div>
-    </details>
-    <details class="sem">
-      <summary class="sem__head">2. semestr</summary>
-      <div class="sem__body"></div>
-    </details>
-    <details class="sem">
-      <summary class="sem__head">3. semestr</summary>
-      <div class="sem__body"></div>
-    </details>
-    <details class="sem">
-      <summary class="sem__head">4. semestr</summary>
-      <div class="sem__body"></div>
-    </details>
-    </div>
-  </section>
-</div>
+    </header>
 
-<div data-panel="cv" hidden>
-  <section class="section" style="padding-top: 1.5rem;">
-    <div class="section__head" style="justify-content: center; text-align: center;">
-      <h2 class="mono-file">Profesní CV</h2>
-    </div>
-    <div id="cvPages" class="cv__pages" aria-label="Životopis Jan Vala"></div>
-    <p class="cv__dl"><a id="cvDownload" href="uploads/CV-JanVala.pdf" download="CV_JanVala.pdf">Stáhnout CV (PDF)</a></p>
-  </section>
-</div>
+    <section class="section" id="projects">
+      <div class="section__head">
+        <h2 class="section__title">Projekty</h2>
+      </div>
+      <ol class="projects">
+        <li class="entry">
+          <h3 class="entry__title">3D Galerie objektů</h3>
+          <p class="entry__desc">Desktopová appka pro dotykovou obrazovku (TV/monitor) v&nbsp;muzeu, bez připojení k&nbsp;internetu. Návštěvníci si z&nbsp;přehledu vyberou exponát a&nbsp;prstem si s&nbsp;jeho 3D modelem mohou volně otáčet, přibližovat a&nbsp;oddalovat. Otestováno, je potřeba dodělat kioskový mód, aby appka nešla vypnout.</p>
+          <ul class="entry__stack"><li>Three.js</li><li>Electron</li><li>glTF / GLB</li></ul>
+          <div class="entry__links"><a href="https://github.com/Vala-Jan/3D-Gallery" target="_blank" rel="noopener">GitHub ↗</a></div>
+        </li>
+        <li class="entry">
+          <h3 class="entry__title">WeatherNow — předpověď počasí</h3>
+          <p class="entry__desc">Rychlá progresivní webová aplikace nad veřejným API s offline podporou a personalizovanými lokacemi.</p>
+          <ul class="entry__stack"><li>TypeScript</li><li>Vite</li><li>Public API</li></ul>
+          <div class="entry__links"><a href="#">GitHub ↗</a></div>
+        </li>
+        <li class="entry">
+          <h3 class="entry__title">Portfolio v1</h3>
+          <p class="entry__desc">První verze osobního webu — statická stránka postavená od nuly pro nácvik sémantického HTML a CSS gridu.</p>
+          <ul class="entry__stack"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          <div class="entry__links"><a href="#">GitHub ↗</a></div>
+        </li>
+      </ol>
+    </section>
+  </div>
+
+  <div data-panel="studium" hidden>
+    <section class="section section--page">
+      <div class="section__head">
+        <h2 class="section__title">Studium</h2>
+      </div>
+      <div class="sems">
+        <details class="sem">
+          <summary class="sem__head">1. semestr</summary>
+          <div class="sem__body">
+            <div class="subjs">
+              <details class="subj">
+                <summary class="subj__head">ISKM01</summary>
+                <p class="subj__body">Popis předmětu doplnit.</p>
+              </details>
+              <details class="subj">
+                <summary class="subj__head">ISKM02</summary>
+                <p class="subj__body">Popis předmětu doplnit.</p>
+              </details>
+              <details class="subj">
+                <summary class="subj__head">ISKM03</summary>
+                <p class="subj__body">Popis předmětu doplnit.</p>
+              </details>
+              <details class="subj">
+                <summary class="subj__head">ISKM04</summary>
+                <p class="subj__body">Popis předmětu doplnit.</p>
+              </details>
+              <details class="subj">
+                <summary class="subj__head">ISKB83</summary>
+                <p class="subj__body">Popis předmětu doplnit.</p>
+              </details>
+              <details class="subj">
+                <summary class="subj__head">ISKM55</summary>
+                <p class="subj__body">Popis předmětu doplnit.</p>
+              </details>
+              <details class="subj">
+                <summary class="subj__head">AI001</summary>
+                <p class="subj__body">Popis předmětu doplnit.</p>
+              </details>
+            </div>
+          </div>
+        </details>
+        <details class="sem">
+          <summary class="sem__head">2. semestr</summary>
+          <div class="sem__body"></div>
+        </details>
+        <details class="sem">
+          <summary class="sem__head">3. semestr</summary>
+          <div class="sem__body"></div>
+        </details>
+        <details class="sem">
+          <summary class="sem__head">4. semestr</summary>
+          <div class="sem__body"></div>
+        </details>
+      </div>
+    </section>
+  </div>
+
+  <div data-panel="cv" hidden>
+    <section class="section section--page">
+      <div class="section__head">
+        <h2 class="section__title">Profesní CV</h2>
+      </div>
+      <div id="cvPages" class="cv__pages" aria-label="Životopis Jan Vala"></div>
+      <p class="cv__dl"><a id="cvDownload" href="uploads/CV-JanVala.pdf" download="CV_JanVala.pdf">Stáhnout CV (PDF)</a></p>
+    </section>
+  </div>
 </main>
 
-<footer class="footer">
-  <p style="opacity: 0.35; font-size: 0.8rem;">© 2026 Jan Vala. All Rights Reserved.</p>
-</footer>
+<footer class="footer">© 2026 Jan Vala. All Rights Reserved.</footer>
 
-<script src="script.js"></script>
 <script>
 (() => {
   const home = location.pathname.replace(/index\.html$/, '');
-  const clean = () => { if (location.pathname + location.search + location.hash !== home) history.replaceState(null, '', home); };
   const panels = [...document.querySelectorAll('[data-panel]')];
   const links = [...document.querySelectorAll('.nav__cats a')];
   const nav = document.querySelector('.nav');
-  let current = 'home';
+  const views = { omne: ['home', 'about'], about: ['home', 'about'], projekty: ['home', 'projects'], projects: ['home', 'projects'], studium: ['studium'], cv: ['cv'], profesnicv: ['cv'] };
+  let current = null;
 
+  // code loop: repeat lines so the scroll is seamless
+  const track = document.querySelector('.codeflow__track');
+  track.innerHTML = track.innerHTML.repeat(4);
+
+  // nav underline
   const setActive = (i) => links.forEach((a, j) => a.classList.toggle('is-active', j === i));
-  const update = () => {
-    if (current !== 'home') { setActive(links.findIndex(a => a.dataset.view === current)); return; }
+  const updateActive = () => {
+    if (current !== 'home') return setActive(links.findIndex(a => a.dataset.view === current));
     const proj = document.getElementById('projects');
-    const atEnd = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
-    const past = proj && proj.getBoundingClientRect().top <= window.innerHeight * 0.6;
-    setActive(past || atEnd ? 1 : 0);
+    const atEnd = innerHeight + scrollY >= document.documentElement.scrollHeight - 4;
+    setActive(atEnd || proj.getBoundingClientRect().top <= innerHeight * 0.6 ? 1 : 0);
   };
+
+  // views on one URL
   const scrollToId = (id) => {
-    const el = id && document.getElementById(id);
-    const top = el && id !== 'about' ? el.getBoundingClientRect().top + window.scrollY - nav.offsetHeight - 8 : 0;
-    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+    const el = id && id !== 'about' && document.getElementById(id);
+    const top = el ? el.getBoundingClientRect().top + scrollY - nav.offsetHeight - 8 : 0;
+    scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
   };
-  const show = (view, target) => {
+  const show = (view, target, push) => {
     const changed = view !== current;
     panels.forEach(p => { p.hidden = p.dataset.panel !== view; });
     current = view;
     if (view === 'cv') loadCV();
-    if (changed) window.scrollTo(0, 0);
+    if (changed) scrollTo(0, 0);
     if (target) requestAnimationFrame(() => scrollToId(target));
-    clean();
-    update();
+    if (push && changed) history.pushState({ view }, '', home);
+    else history.replaceState({ view }, '', home);
+    updateActive();
   };
+  const fromLocation = () => (history.state && history.state.view ? [history.state.view] : views[location.hash.slice(1).toLowerCase()] || ['home']);
 
-  links.forEach(a => a.addEventListener('click', (e) => { e.preventDefault(); show(a.dataset.view, a.dataset.target); }));
-  document.querySelector('[data-home]').addEventListener('click', () => show('home', 'about'));
+  links.forEach(a => a.addEventListener('click', (e) => { e.preventDefault(); show(a.dataset.view, a.dataset.target, true); }));
+  document.querySelector('[data-home]').addEventListener('click', () => show('home', 'about', true));
+  addEventListener('popstate', () => show(...fromLocation()));
+  addEventListener('hashchange', () => show(...fromLocation()));
+  addEventListener('pageshow', (e) => { if (e.persisted) show(...fromLocation()); });
+  addEventListener('scroll', updateActive, { passive: true });
+  addEventListener('resize', updateActive);
+  addEventListener('load', updateActive);
 
+  // CV (loaded on first open)
+  const CV = 'uploads/CV-JanVala.pdf';
   let cvLoaded = false;
-  const SRC = 'uploads/CV-JanVala.pdf';
   async function loadCV() {
     if (cvLoaded) return;
     cvLoaded = true;
@@ -216,45 +220,33 @@
     try {
       const pdfjs = await import('https://cdn.jsdelivr.net/npm/pdfjs-dist@4.4.168/build/pdf.min.mjs');
       pdfjs.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.4.168/build/pdf.worker.min.mjs';
-      const buf = await (await fetch(SRC)).arrayBuffer();
-      const doc = await pdfjs.getDocument({ data: new Uint8Array(buf) }).promise;
+      const doc = await pdfjs.getDocument({ data: new Uint8Array(await (await fetch(CV)).arrayBuffer()) }).promise;
       for (let i = 1; i <= doc.numPages; i++) {
         const page = await doc.getPage(i);
         const vp = page.getViewport({ scale: 2 });
-        const c = document.createElement('canvas');
-        c.width = vp.width; c.height = vp.height;
-        c.className = 'cv__page';
-        host.appendChild(c);
-        await page.render({ canvasContext: c.getContext('2d'), viewport: vp }).promise;
+        const canvas = Object.assign(document.createElement('canvas'), { width: vp.width, height: vp.height, className: 'cv__page' });
+        host.appendChild(canvas);
+        await page.render({ canvasContext: canvas.getContext('2d'), viewport: vp }).promise;
       }
     } catch (err) {
       host.textContent = 'CV se nepodařilo načíst.';
-      console.warn(err);
     }
   }
   document.getElementById('cvDownload').addEventListener('click', async (e) => {
     e.preventDefault();
     try {
-      const blob = await (await fetch(SRC)).blob();
-      const url = URL.createObjectURL(new Blob([blob], { type: 'application/pdf' }));
-      const a = document.createElement('a');
-      a.href = url; a.download = 'CV_JanVala.pdf';
+      const url = URL.createObjectURL(await (await fetch(CV)).blob());
+      const a = Object.assign(document.createElement('a'), { href: url, download: 'CV_JanVala.pdf' });
       document.body.appendChild(a); a.click(); a.remove();
       setTimeout(() => URL.revokeObjectURL(url), 2000);
-    } catch (err) { window.location.href = SRC; }
+    } catch (err) { location.href = CV; }
   });
 
-  const hash = location.hash.slice(1).toLowerCase();
+  // start: old links (studium.html, profesnicv.html, #hash) land on the right view
   let stored = null;
   try { stored = sessionStorage.getItem('portfolioView'); sessionStorage.removeItem('portfolioView'); } catch (e) {}
-  const map = { omne: ['home', 'about'], about: ['home', 'about'], projekty: ['home', 'projects'], projects: ['home', 'projects'], studium: ['studium'], cv: ['cv'], profesnicv: ['cv'] };
-  const start = map[stored] || map[hash];
-  clean();
-  if (start) show(start[0], start[1]); else update();
-
-  addEventListener('load', update);
-  addEventListener('scroll', update, { passive: true });
-  addEventListener('resize', update);
+  const start = views[stored] || views[location.hash.slice(1).toLowerCase()] || ['home'];
+  show(start[0], start[1]);
 })();
 </script>
 </body>
