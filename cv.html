@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profesní CV — Jan Vala</title>
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="hero__name" style="text-decoration:none;color:inherit" aria-label="Jan Vala"><span class="hero__line hero__line--before" aria-hidden="true"></span><span class="hero__word" aria-hidden="true"><span class="ch" style="--i:0">J</span><span class="ch" style="--i:1">a</span><span class="ch" style="--i:2">n</span></span> <span class="hero__word" aria-hidden="true"><span class="ch" style="--i:3">V</span><span class="ch" style="--i:4">a</span><span class="ch" style="--i:5">l</span><span class="ch" style="--i:6">a</span></span><span class="hero__line" aria-hidden="true"></span></a>
+  <div class="nav__cats">
+    <a href="index.html#about">O mně</a>
+    <a href="index.html#projects">Projekty</a>
+    <a href="studium.html">Studium</a>
+    <a href="cv.html" class="is-active" aria-current="page">Profesní CV</a>
+  </div>
+</nav>
+
+<main>
+  <section class="section" style="padding-top: 1.5rem;">
+    <div class="section__head">
+      <h2 class="mono-file">Profesní CV</h2>
+    </div>
+    <div id="cvPages" class="cv__pages" aria-label="Životopis Jan Vala"></div>
+    <p class="cv__dl"><a href="uploads/CV_Vala.pdf" download>Stáhnout CV (PDF)</a></p>
+  </section>
+</main>
+<script type="module">
+import * as pdfjs from "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.4.168/build/pdf.min.mjs";
+pdfjs.GlobalWorkerOptions.workerSrc = "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.4.168/build/pdf.worker.min.mjs";
+const host = document.getElementById("cvPages");
+try {
+  const buf = await (await fetch("uploads/CV_Vala.pdf")).arrayBuffer();
+  const doc = await pdfjs.getDocument({ data: new Uint8Array(buf) }).promise;
+  for (let i = 1; i <= doc.numPages; i++) {
+    const page = await doc.getPage(i);
+    const vp = page.getViewport({ scale: 2 });
+    const c = document.createElement("canvas");
+    c.width = vp.width; c.height = vp.height;
+    c.className = "cv__page";
+    host.appendChild(c);
+    await page.render({ canvasContext: c.getContext("2d"), viewport: vp }).promise;
+  }
+} catch (err) {
+  host.textContent = "CV se nepodařilo načíst.";
+  console.warn(err);
+}
+</script>
+
+</body>
+</html>

@@ -8,136 +8,66 @@
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,680&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <nav class="nav">
-  <a class="nav__brand" href="#top">jan<span class="dim">@</span>vala</a>
-  <div class="nav__links">
-    <a href="#about">o mně</a>
-    <a href="#skills">dovednosti</a>
-    <a href="#projects">changelog</a>
-    <a href="#contact">kontakt</a>
+  <h1 class="hero__name" aria-label="Jan Vala"><span class="hero__line hero__line--before" aria-hidden="true"></span><span class="hero__word" aria-hidden="true"><span class="ch" style="--i:0">J</span><span class="ch" style="--i:1">a</span><span class="ch" style="--i:2">n</span></span> <span class="hero__word" aria-hidden="true"><span class="ch" style="--i:3">V</span><span class="ch" style="--i:4">a</span><span class="ch" style="--i:5">l</span><span class="ch" style="--i:6">a</span></span><span class="hero__line" aria-hidden="true"></span></h1>
+  <div class="nav__cats">
+    <a href="#about">O mně</a>
+    <a href="#projects">Projekty</a>
+    <a href="studium.html">Studium</a>
+    <a href="cv.html">Profesní CV</a>
   </div>
-  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Přepnout světlý/tmavý režim">◐</button>
 </nav>
 
 <main id="top">
 
   <header class="hero">
-    <p class="hero__path">~/jan-vala/portfolio <span class="cursor" aria-hidden="true">▌</span></p>
-    <h1 class="hero__name">Jan Vala</h1>
-    <p class="hero__role">Software Developer</p>
-    <p class="hero__tagline">
-      Stavím weby a nástroje, které fungují spolehlivě a vypadají promyšleně —
-      od prvního commitu po nasazení do produkce.
-    </p>
-    <div class="hero__meta">
-      <span class="badge"><span class="badge__dot" aria-hidden="true"></span>Otevřený novým příležitostem</span>
-      <span class="hero__location">Praha, CZ</span>
+    <div class="hero__left">
+    <figure class="hero__photo">
+      <div class="hero__photo-line"><div class="hero__photo-inner"><img src="uploads/pasted-1790348372441-0.png" alt="Jan Vala u počítače, vedle 3D skener ZEISS snímá sošku býka na otočném talíři"></div></div>
+    </figure>
+    <a class="hero__mail" href="mailto:551953@mail.muni.cz"><svg class="hero__mail-icon" viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"/></svg><span>551953@mail.muni.cz</span></a>
     </div>
-    <div class="hero__cta">
-      <a class="btn btn--primary" href="#contact">Napsat email</a>
-      <a class="btn btn--ghost" href="#projects">Zobrazit projekty</a>
+    <p class="hero__role" aria-hidden="true">&nbsp;</p>
+    <div class="hero__row">
+    <div class="hero__col">
+    <p id="about" class="hero__statement">Zajímají mě data, automatizace, digitalizace a&nbsp;kulturní dědictví</p>
+    <div class="hero__code codeflow" aria-hidden="true">
+      <div class="codeflow__row" style="--d:38s"><span><span class="tk-k">import</span> <span class="tk-v">pandas</span> <span class="tk-k">as</span> <span class="tk-v">pd</span><span class="tk-c">  ·  </span><span class="tk-v">df</span> = <span class="tk-v">pd</span>.<span class="tk-f">read_csv</span>(<span class="tk-s">"sbirka_mzm.csv"</span>)<span class="tk-c">  ·  </span><span class="tk-v">df</span> = <span class="tk-v">df</span>.<span class="tk-f">dropna</span>(<span class="tk-v">subset</span>=[<span class="tk-s">"inv_cislo"</span>])<span class="tk-c">  ·  </span><span class="tk-k">import</span> <span class="tk-v">pandas</span> <span class="tk-k">as</span> <span class="tk-v">pd</span><span class="tk-c">  ·  </span><span class="tk-v">df</span> = <span class="tk-v">pd</span>.<span class="tk-f">read_csv</span>(<span class="tk-s">"sbirka_mzm.csv"</span>)<span class="tk-c">  ·  </span><span class="tk-v">df</span> = <span class="tk-v">df</span>.<span class="tk-f">dropna</span>(<span class="tk-v">subset</span>=[<span class="tk-s">"inv_cislo"</span>])<span class="tk-c">  ·  </span></span><span aria-hidden="true"><span class="tk-k">import</span> <span class="tk-v">pandas</span> <span class="tk-k">as</span> <span class="tk-v">pd</span><span class="tk-c">  ·  </span><span class="tk-v">df</span> = <span class="tk-v">pd</span>.<span class="tk-f">read_csv</span>(<span class="tk-s">"sbirka_mzm.csv"</span>)<span class="tk-c">  ·  </span><span class="tk-v">df</span> = <span class="tk-v">df</span>.<span class="tk-f">dropna</span>(<span class="tk-v">subset</span>=[<span class="tk-s">"inv_cislo"</span>])<span class="tk-c">  ·  </span><span class="tk-k">import</span> <span class="tk-v">pandas</span> <span class="tk-k">as</span> <span class="tk-v">pd</span><span class="tk-c">  ·  </span><span class="tk-v">df</span> = <span class="tk-v">pd</span>.<span class="tk-f">read_csv</span>(<span class="tk-s">"sbirka_mzm.csv"</span>)<span class="tk-c">  ·  </span><span class="tk-v">df</span> = <span class="tk-v">df</span>.<span class="tk-f">dropna</span>(<span class="tk-v">subset</span>=[<span class="tk-s">"inv_cislo"</span>])<span class="tk-c">  ·  </span></span></div>
+      <div class="codeflow__row" style="--d:52s"><span><span class="tk-k">SELECT</span> <span class="tk-v">obor</span>, <span class="tk-f">COUNT</span>(*) <span class="tk-k">AS</span> <span class="tk-v">pocet</span> <span class="tk-k">FROM</span> <span class="tk-v">predmety</span> <span class="tk-k">WHERE</span> <span class="tk-v">digitalizovano</span> = <span class="tk-n">1</span> <span class="tk-k">GROUP BY</span> <span class="tk-v">obor</span> <span class="tk-k">ORDER BY</span> <span class="tk-v">pocet</span> <span class="tk-k">DESC</span>;<span class="tk-c">  ·  </span><span class="tk-k">SELECT</span> <span class="tk-v">obor</span>, <span class="tk-f">COUNT</span>(*) <span class="tk-k">AS</span> <span class="tk-v">pocet</span> <span class="tk-k">FROM</span> <span class="tk-v">predmety</span> <span class="tk-k">WHERE</span> <span class="tk-v">digitalizovano</span> = <span class="tk-n">1</span> <span class="tk-k">GROUP BY</span> <span class="tk-v">obor</span> <span class="tk-k">ORDER BY</span> <span class="tk-v">pocet</span> <span class="tk-k">DESC</span>;<span class="tk-c">  ·  </span></span><span aria-hidden="true"><span class="tk-k">SELECT</span> <span class="tk-v">obor</span>, <span class="tk-f">COUNT</span>(*) <span class="tk-k">AS</span> <span class="tk-v">pocet</span> <span class="tk-k">FROM</span> <span class="tk-v">predmety</span> <span class="tk-k">WHERE</span> <span class="tk-v">digitalizovano</span> = <span class="tk-n">1</span> <span class="tk-k">GROUP BY</span> <span class="tk-v">obor</span> <span class="tk-k">ORDER BY</span> <span class="tk-v">pocet</span> <span class="tk-k">DESC</span>;<span class="tk-c">  ·  </span><span class="tk-k">SELECT</span> <span class="tk-v">obor</span>, <span class="tk-f">COUNT</span>(*) <span class="tk-k">AS</span> <span class="tk-v">pocet</span> <span class="tk-k">FROM</span> <span class="tk-v">predmety</span> <span class="tk-k">WHERE</span> <span class="tk-v">digitalizovano</span> = <span class="tk-n">1</span> <span class="tk-k">GROUP BY</span> <span class="tk-v">obor</span> <span class="tk-k">ORDER BY</span> <span class="tk-v">pocet</span> <span class="tk-k">DESC</span>;<span class="tk-c">  ·  </span></span></div>
+      <div class="codeflow__row" style="--d:44s"><span><span class="tk-v">mesh</span> = <span class="tk-v">trimesh</span>.<span class="tk-f">load</span>(<span class="tk-s">"byk_scan.glb"</span>)<span class="tk-c">  ·  </span><span class="tk-v">mesh</span>.<span class="tk-f">export</span>(<span class="tk-s">"byk_web.glb"</span>)<span class="tk-c">  ·  </span><span class="tk-k">for</span> <span class="tk-v">img</span> <span class="tk-k">in</span> <span class="tk-v">tiff_batch</span>: <span class="tk-f">convert</span>(<span class="tk-v">img</span>, <span class="tk-v">dpi</span>=<span class="tk-n">2400</span>)<span class="tk-c">  ·  </span><span class="tk-v">mesh</span> = <span class="tk-v">trimesh</span>.<span class="tk-f">load</span>(<span class="tk-s">"byk_scan.glb"</span>)<span class="tk-c">  ·  </span><span class="tk-v">mesh</span>.<span class="tk-f">export</span>(<span class="tk-s">"byk_web.glb"</span>)<span class="tk-c">  ·  </span><span class="tk-k">for</span> <span class="tk-v">img</span> <span class="tk-k">in</span> <span class="tk-v">tiff_batch</span>: <span class="tk-f">convert</span>(<span class="tk-v">img</span>, <span class="tk-v">dpi</span>=<span class="tk-n">2400</span>)<span class="tk-c">  ·  </span></span><span aria-hidden="true"><span class="tk-v">mesh</span> = <span class="tk-v">trimesh</span>.<span class="tk-f">load</span>(<span class="tk-s">"byk_scan.glb"</span>)<span class="tk-c">  ·  </span><span class="tk-v">mesh</span>.<span class="tk-f">export</span>(<span class="tk-s">"byk_web.glb"</span>)<span class="tk-c">  ·  </span><span class="tk-k">for</span> <span class="tk-v">img</span> <span class="tk-k">in</span> <span class="tk-v">tiff_batch</span>: <span class="tk-f">convert</span>(<span class="tk-v">img</span>, <span class="tk-v">dpi</span>=<span class="tk-n">2400</span>)<span class="tk-c">  ·  </span><span class="tk-v">mesh</span> = <span class="tk-v">trimesh</span>.<span class="tk-f">load</span>(<span class="tk-s">"byk_scan.glb"</span>)<span class="tk-c">  ·  </span><span class="tk-v">mesh</span>.<span class="tk-f">export</span>(<span class="tk-s">"byk_web.glb"</span>)<span class="tk-c">  ·  </span><span class="tk-k">for</span> <span class="tk-v">img</span> <span class="tk-k">in</span> <span class="tk-v">tiff_batch</span>: <span class="tk-f">convert</span>(<span class="tk-v">img</span>, <span class="tk-v">dpi</span>=<span class="tk-n">2400</span>)<span class="tk-c">  ·  </span></span></div>
+    </div>
+    <p class="hero__sub">Studuji navazující magisterský program na KISKu. Mám vystudovanou estetiku a&nbsp;pedagogiku, osud mě ale nakonec zavál k&nbsp;datům, digitalizaci a&nbsp;technologiím v&nbsp;oblasti kulturního dědictví. Pracuji na digitalizačním pracovišti druhé největší muzejní instituce v&nbsp;České republice (MZM), kde se věnuji 2D a&nbsp;3D digitalizaci, podpoře odborné činnosti a&nbsp;zpracování digitálních dat. Mým cílem je prohloubit své datové dovednosti, stát se plnohodnotným datovým kurátorem a&nbsp;analytikem.</p>
+    </div>
     </div>
   </header>
 
-  <section class="section" id="about">
-    <div class="section__head">
-      <p class="eyebrow">01 · soubor</p>
-      <h2 class="mono-file">README.md</h2>
-    </div>
-    <div class="about__grid">
-      <div class="about__text">
-        <p>
-          Jsem vývojář zaměřený na webové aplikace — od návrhu rozhraní přes API
-          až po nasazení. Baví mě, když je kód čitelný a produkt dává smysl
-          i po roce údržby. Tenhle text je zatím placeholder — nahraď ho pár
-          větami o sobě, svém přístupu k práci a tom, co tě na vývoji baví.
-        </p>
-        <p>
-          Poslední dobou se soustředím na full-stack projekty v TypeScriptu
-          a na zlepšování výkonu a přístupnosti webů, které stavím.
-        </p>
-      </div>
-      <dl class="specs">
-        <div class="specs__row">
-          <dt>started</dt><dd>2021</dd>
-        </div>
-        <div class="specs__row">
-          <dt>focus</dt><dd>Web &amp; Full-stack</dd>
-        </div>
-        <div class="specs__row">
-          <dt>stack</dt><dd>TypeScript · React · Node.js</dd>
-        </div>
-        <div class="specs__row">
-          <dt>location</dt><dd>Praha, CZ</dd>
-        </div>
-      </dl>
-    </div>
-  </section>
 
-  <section class="section" id="skills">
-    <div class="section__head">
-      <p class="eyebrow">02 · soubor</p>
-      <h2 class="mono-file">dependencies.json</h2>
-    </div>
-    <div class="skills">
-      <div class="skills__group">
-        <p class="skills__label">jazyky &amp; frameworky</p>
-        <ul class="tags">
-          <li>JavaScript</li><li>TypeScript</li><li>React</li><li>Next.js</li><li>Node.js</li>
-        </ul>
-      </div>
-      <div class="skills__group">
-        <p class="skills__label">backend &amp; data</p>
-        <ul class="tags">
-          <li>Python</li><li>PostgreSQL</li><li>REST API</li><li>GraphQL</li>
-        </ul>
-      </div>
-      <div class="skills__group">
-        <p class="skills__label">nástroje</p>
-        <ul class="tags">
-          <li>Git</li><li>Docker</li><li>Figma</li><li>Linux</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
   <section class="section" id="projects">
     <div class="section__head">
-      <p class="eyebrow">03 · soubor</p>
-      <h2 class="mono-file">CHANGELOG.md</h2>
+      <h2 class="mono-file">Projekty</h2>
     </div>
-    <p class="section__hint">Vyber si a nahraď vlastními projekty — struktura zůstává, obsah je na tobě.</p>
 
     <ol class="changelog">
       <li class="entry">
-        <div class="entry__meta">
-          <span class="entry__version">v2025.03</span>
-          <span class="entry__tag entry__tag--feature">projekt</span>
-        </div>
-        <h3 class="entry__title">TaskFlow — správce úkolů pro týmy</h3>
+        <h3 class="entry__title">3D Galerie objektů</h3>
         <p class="entry__desc">
-          Webová aplikace pro plánování a sledování úkolů s real-time synchronizací
-          mezi členy týmu a přehledy produktivity.
+          Dotyková interaktivní aplikace pro prezentační či výstavní účely.
         </p>
         <ul class="entry__stack">
           <li>React</li><li>Node.js</li><li>PostgreSQL</li><li>WebSocket</li>
         </ul>
         <div class="entry__links">
           <a href="#">GitHub ↗</a>
-          <a href="#">Live demo ↗</a>
         </div>
       </li>
 
       <li class="entry">
-        <div class="entry__meta">
-          <span class="entry__version">v2024.11</span>
-          <span class="entry__tag entry__tag--feature">projekt</span>
-        </div>
         <h3 class="entry__title">WeatherNow — předpověď počasí</h3>
         <p class="entry__desc">
           Rychlá progresivní webová aplikace nad veřejným API s offline
@@ -148,15 +78,10 @@
         </ul>
         <div class="entry__links">
           <a href="#">GitHub ↗</a>
-          <a href="#">Live demo ↗</a>
         </div>
       </li>
 
       <li class="entry">
-        <div class="entry__meta">
-          <span class="entry__version">v2023.06</span>
-          <span class="entry__tag entry__tag--init">start</span>
-        </div>
         <h3 class="entry__title">Portfolio v1</h3>
         <p class="entry__desc">
           První verze osobního webu — statická stránka postavená od nuly
@@ -169,22 +94,39 @@
           <a href="#">GitHub ↗</a>
         </div>
       </li>
+      <li class="entry">
+        <h3 class="entry__title">Projekt — doplnit</h3>
+        <p class="entry__desc">Popis projektu doplň zde.</p>
+        <ul class="entry__stack">
+          <li>Stack</li>
+        </ul>
+        <div class="entry__links">
+          <a href="#">GitHub ↗</a>
+        </div>
+      </li>
+      <li class="entry">
+        <h3 class="entry__title">Projekt — doplnit</h3>
+        <p class="entry__desc">Popis projektu doplň zde.</p>
+        <ul class="entry__stack">
+          <li>Stack</li>
+        </ul>
+        <div class="entry__links">
+          <a href="#">GitHub ↗</a>
+        </div>
+      </li>
+      <li class="entry">
+        <h3 class="entry__title">Projekt — doplnit</h3>
+        <p class="entry__desc">Popis projektu doplň zde.</p>
+        <ul class="entry__stack">
+          <li>Stack</li>
+        </ul>
+        <div class="entry__links">
+          <a href="#">GitHub ↗</a>
+        </div>
+      </li>
     </ol>
   </section>
 
-  <section class="section section--contact" id="contact">
-    <div class="section__head">
-      <p class="eyebrow">04 · soubor</p>
-      <h2 class="mono-file">contact.sh</h2>
-    </div>
-    <div class="terminal">
-      <p class="terminal__line"><span class="prompt">jan@vala</span><span class="dim">:~$</span> ./contact</p>
-      <p class="terminal__line terminal__output">email &nbsp;&nbsp;<a href="mailto:jan@example.com">jan@example.com</a></p>
-      <p class="terminal__line terminal__output">github &nbsp;<a href="https://github.com/Vala-Jan" target="_blank" rel="noopener">github.com/Vala-Jan</a></p>
-      <p class="terminal__line terminal__output">linked &nbsp;<a href="#" target="_blank" rel="noopener">linkedin.com/in/jan-vala</a></p>
-      <p class="terminal__line"><span class="cursor" aria-hidden="true">▌</span></p>
-    </div>
-  </section>
 
 </main>
 
@@ -193,5 +135,27 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+(() => {
+  const links = [...document.querySelectorAll('.nav__cats a')];
+  const hero = document.querySelector('.hero');
+  const targets = links.map(a => {
+    const href = a.getAttribute('href');
+    const el = href.startsWith('#') ? document.querySelector(href) : null;
+    return el && hero && hero.contains(el) ? hero : el;
+  });
+  const setActive = (i) => links.forEach((a, j) => a.classList.toggle('is-active', j === i));
+  const update = () => {
+    const line = window.innerHeight * 0.35;
+    let idx = 0;
+    targets.forEach((el, i) => { if (el && el.getBoundingClientRect().top <= line) idx = i; });
+    setActive(idx);
+  };
+  links.forEach((a, i) => a.addEventListener('click', () => setActive(i)));
+  addEventListener('scroll', update, { passive: true });
+  addEventListener('resize', update);
+  update();
+})();
+</script>
 </body>
 </html>

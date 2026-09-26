@@ -1,22 +1,23 @@
 # Portfolio
 
-Osobní portfolio — statický web (HTML/CSS/JS, bez buildu), nasazovaný na GitHub Pages.
+Osobní portfolio Jana Valy — statický web (HTML/CSS/JS, bez buildu), nasazovaný na GitHub Pages.
 
 ## Struktura
 
-- `index.html` — obsah stránky
-- `styles.css` — vzhled, barvy a typografie (světlý/tmavý režim)
-- `script.js` — přepínač motivu a drobné doplňky
+- `index.html` — hlavní stránka (O mně, Projekty)
+- `studium.html` — přehled studia po semestrech (rozbalovací seznam předmětů)
+- `cv.html` — profesní CV, náhled PDF přes pdf.js + odkaz ke stažení
+- `styles.css` — vzhled, barvy a typografie (tmavé téma, animace)
+- `script.js` — doplnění aktuálního roku v patičce
+- `uploads/` — statické soubory (fotka, `CV_Vala.pdf`)
 - `.github/workflows/deploy.yml` — automatické nasazení na GitHub Pages při pushi do `main`
 
 ## Úprava obsahu
 
-Vlastní texty, projekty a odkazy uprav přímo v `index.html`:
-
-- **O mně** — sekce `#about`
-- **Dovednosti** — sekce `#skills`
-- **Projekty** — sekce `#projects` (styl "changelogu", každý projekt jako jedna položka `<li class="entry">`)
-- **Kontakt** — sekce `#contact` (email, GitHub, LinkedIn)
+- **O mně / úvodní text** — `index.html`, sekce `.hero`
+- **Projekty** — `index.html`, sekce `#projects` (každý projekt jako `<li class="entry">`)
+- **Studium** — `studium.html`, jednotlivé `<details class="sem">` po semestrech
+- **CV** — nahraď `uploads/CV_Vala.pdf` vlastním souborem se stejným názvem (nebo uprav cestu v `cv.html`)
 
 ## Lokální náhled
 
