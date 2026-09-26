@@ -14,16 +14,17 @@
 <body>
 
 <nav class="nav">
-  <h1 class="hero__name" aria-label="Jan Vala"><span class="hero__line hero__line--before" aria-hidden="true"></span><span class="hero__word" aria-hidden="true"><span class="ch" style="--i:0">J</span><span class="ch" style="--i:1">a</span><span class="ch" style="--i:2">n</span></span> <span class="hero__word" aria-hidden="true"><span class="ch" style="--i:3">V</span><span class="ch" style="--i:4">a</span><span class="ch" style="--i:5">l</span><span class="ch" style="--i:6">a</span></span><span class="hero__line" aria-hidden="true"></span></h1>
+  <h1 class="hero__name" aria-label="Jan Vala" data-home style="cursor:pointer"><span class="hero__line hero__line--before" aria-hidden="true"></span><span class="hero__word" aria-hidden="true"><span class="ch" style="--i:0">J</span><span class="ch" style="--i:1">a</span><span class="ch" style="--i:2">n</span></span> <span class="hero__word" aria-hidden="true"><span class="ch" style="--i:3">V</span><span class="ch" style="--i:4">a</span><span class="ch" style="--i:5">l</span><span class="ch" style="--i:6">a</span></span><span class="hero__line" aria-hidden="true"></span></h1>
   <div class="nav__cats">
-    <a href="#omne">O mně</a>
-    <a href="#projekty">Projekty</a>
-    <a href="studium.html">Studium</a>
-    <a href="profesnicv.html">Profesní CV</a>
+    <a href="./" data-view="home" data-target="about">O mně</a>
+    <a href="./" data-view="home" data-target="projects">Projekty</a>
+    <a href="./" data-view="studium">Studium</a>
+    <a href="./" data-view="cv">Profesní CV</a>
   </div>
 </nav>
 
 <main id="top">
+<div data-panel="home">
 
   <header class="hero">
     <div class="hero__left">
@@ -95,6 +96,74 @@
   </section>
 
 
+</div>
+
+<div data-panel="studium" hidden>
+  <section class="section" style="padding-top: 1.5rem;">
+    <div class="section__head" style="justify-content: center; text-align: center;">
+      <h2 class="mono-file">Studium</h2>
+    </div>
+    <div class="sems">
+    <details class="sem">
+      <summary class="sem__head">1. semestr</summary>
+      <div class="sem__body">
+        <div class="subjs">
+          <details class="subj">
+            <summary class="subj__head">ISKM01</summary>
+            <p class="subj__body">Popis předmětu doplnit.</p>
+          </details>
+          <details class="subj">
+            <summary class="subj__head">ISKM02</summary>
+            <p class="subj__body">Popis předmětu doplnit.</p>
+          </details>
+          <details class="subj">
+            <summary class="subj__head">ISKM03</summary>
+            <p class="subj__body">Popis předmětu doplnit.</p>
+          </details>
+          <details class="subj">
+            <summary class="subj__head">ISKM04</summary>
+            <p class="subj__body">Popis předmětu doplnit.</p>
+          </details>
+          <details class="subj">
+            <summary class="subj__head">ISKB83</summary>
+            <p class="subj__body">Popis předmětu doplnit.</p>
+          </details>
+          <details class="subj">
+            <summary class="subj__head">ISKM55</summary>
+            <p class="subj__body">Popis předmětu doplnit.</p>
+          </details>
+          <details class="subj">
+            <summary class="subj__head">AI001</summary>
+            <p class="subj__body">Popis předmětu doplnit.</p>
+          </details>
+        </div>
+      </div>
+    </details>
+    <details class="sem">
+      <summary class="sem__head">2. semestr</summary>
+      <div class="sem__body"></div>
+    </details>
+    <details class="sem">
+      <summary class="sem__head">3. semestr</summary>
+      <div class="sem__body"></div>
+    </details>
+    <details class="sem">
+      <summary class="sem__head">4. semestr</summary>
+      <div class="sem__body"></div>
+    </details>
+    </div>
+  </section>
+</div>
+
+<div data-panel="cv" hidden>
+  <section class="section" style="padding-top: 1.5rem;">
+    <div class="section__head" style="justify-content: center; text-align: center;">
+      <h2 class="mono-file">Profesní CV</h2>
+    </div>
+    <div id="cvPages" class="cv__pages" aria-label="Životopis Jan Vala"></div>
+    <p class="cv__dl"><a id="cvDownload" href="uploads/CV-JanVala.pdf" download="CV_JanVala.pdf">Stáhnout CV (PDF)</a></p>
+  </section>
+</div>
 </main>
 
 <footer class="footer">
@@ -104,30 +173,88 @@
 <script src="script.js"></script>
 <script>
 (() => {
+  const home = location.pathname.replace(/index\.html$/, '');
+  const clean = () => { if (location.pathname + location.search + location.hash !== home) history.replaceState(null, '', home); };
+  const panels = [...document.querySelectorAll('[data-panel]')];
   const links = [...document.querySelectorAll('.nav__cats a')];
-  const hero = document.querySelector('.hero');
-  const targets = links.map(a => {
-    const href = a.getAttribute('href');
-    const el = href.startsWith('#') ? document.querySelector(href) : null;
-    return el && hero && hero.contains(el) ? hero : el;
-  });
+  const nav = document.querySelector('.nav');
+  let current = 'home';
+
   const setActive = (i) => links.forEach((a, j) => a.classList.toggle('is-active', j === i));
   const update = () => {
-    const line = window.innerHeight * 0.6;
-    let idx = 0;
-    targets.forEach((el, i) => { if (el && el !== targets[0] && el.getBoundingClientRect().top <= line) idx = i; });
-    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
-      const last = targets.reduce((acc, el, i) => (el && el !== targets[0] ? i : acc), idx);
-      idx = last;
-    }
-    setActive(idx);
+    if (current !== 'home') { setActive(links.findIndex(a => a.dataset.view === current)); return; }
+    const proj = document.getElementById('projects');
+    const atEnd = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+    const past = proj && proj.getBoundingClientRect().top <= window.innerHeight * 0.6;
+    setActive(past || atEnd ? 1 : 0);
   };
-  links.forEach((a, i) => a.addEventListener('click', () => setActive(i)));
+  const scrollToId = (id) => {
+    const el = id && document.getElementById(id);
+    const top = el && id !== 'about' ? el.getBoundingClientRect().top + window.scrollY - nav.offsetHeight - 8 : 0;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+  };
+  const show = (view, target) => {
+    const changed = view !== current;
+    panels.forEach(p => { p.hidden = p.dataset.panel !== view; });
+    current = view;
+    if (view === 'cv') loadCV();
+    if (changed) window.scrollTo(0, 0);
+    if (target) requestAnimationFrame(() => scrollToId(target));
+    clean();
+    update();
+  };
+
+  links.forEach(a => a.addEventListener('click', (e) => { e.preventDefault(); show(a.dataset.view, a.dataset.target); }));
+  document.querySelector('[data-home]').addEventListener('click', () => show('home', 'about'));
+
+  let cvLoaded = false;
+  const SRC = 'uploads/CV-JanVala.pdf';
+  async function loadCV() {
+    if (cvLoaded) return;
+    cvLoaded = true;
+    const host = document.getElementById('cvPages');
+    try {
+      const pdfjs = await import('https://cdn.jsdelivr.net/npm/pdfjs-dist@4.4.168/build/pdf.min.mjs');
+      pdfjs.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.4.168/build/pdf.worker.min.mjs';
+      const buf = await (await fetch(SRC)).arrayBuffer();
+      const doc = await pdfjs.getDocument({ data: new Uint8Array(buf) }).promise;
+      for (let i = 1; i <= doc.numPages; i++) {
+        const page = await doc.getPage(i);
+        const vp = page.getViewport({ scale: 2 });
+        const c = document.createElement('canvas');
+        c.width = vp.width; c.height = vp.height;
+        c.className = 'cv__page';
+        host.appendChild(c);
+        await page.render({ canvasContext: c.getContext('2d'), viewport: vp }).promise;
+      }
+    } catch (err) {
+      host.textContent = 'CV se nepodařilo načíst.';
+      console.warn(err);
+    }
+  }
+  document.getElementById('cvDownload').addEventListener('click', async (e) => {
+    e.preventDefault();
+    try {
+      const blob = await (await fetch(SRC)).blob();
+      const url = URL.createObjectURL(new Blob([blob], { type: 'application/pdf' }));
+      const a = document.createElement('a');
+      a.href = url; a.download = 'CV_JanVala.pdf';
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 2000);
+    } catch (err) { window.location.href = SRC; }
+  });
+
+  const hash = location.hash.slice(1).toLowerCase();
+  let stored = null;
+  try { stored = sessionStorage.getItem('portfolioView'); sessionStorage.removeItem('portfolioView'); } catch (e) {}
+  const map = { omne: ['home', 'about'], about: ['home', 'about'], projekty: ['home', 'projects'], projects: ['home', 'projects'], studium: ['studium'], cv: ['cv'], profesnicv: ['cv'] };
+  const start = map[stored] || map[hash];
+  clean();
+  if (start) show(start[0], start[1]); else update();
+
   addEventListener('load', update);
-  if ('ResizeObserver' in window) new ResizeObserver(update).observe(document.body);
   addEventListener('scroll', update, { passive: true });
   addEventListener('resize', update);
-  update();
 })();
 </script>
 </body>
