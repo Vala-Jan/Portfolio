@@ -194,6 +194,7 @@
     current = view;
     if (view === 'cv') loadCV();
     if (changed) scrollTo(0, 0);
+    nav.classList.remove('nav--hidden');
     if (target) requestAnimationFrame(() => scrollToId(target));
     if (push && changed) history.pushState({ view }, '', home);
     else history.replaceState({ view }, '', home);
@@ -207,6 +208,15 @@
   addEventListener('hashchange', () => show(...fromLocation()));
   addEventListener('pageshow', (e) => { if (e.persisted) show(...fromLocation()); });
   addEventListener('scroll', updateActive, { passive: true });
+
+  // mobile: hide the bar when scrolling down, show it when scrolling up
+  const mobile = matchMedia('(max-width: 640px)');
+  let lastY = scrollY;
+  addEventListener('scroll', () => {
+    const y = scrollY;
+    nav.classList.toggle('nav--hidden', mobile.matches && y > lastY && y > nav.offsetHeight);
+    lastY = y;
+  }, { passive: true });
   addEventListener('resize', updateActive);
   addEventListener('load', updateActive);
 
