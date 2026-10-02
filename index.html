@@ -14,7 +14,7 @@
 <body>
 
 <nav class="nav">
-  <h1 class="hero__name" data-home><span class="hero__line hero__line--before" aria-hidden="true"></span>Jan Vala<span class="hero__line" aria-hidden="true"></span></h1>
+  <h1 class="hero__name" data-home>Jan Vala</h1>
   <div class="nav__cats">
     <a href="./" data-view="home" data-target="about">O mně</a>
     <a href="./" data-view="home" data-target="projects">Projekty</a>
@@ -34,31 +34,9 @@
       </div>
       <div class="hero__col">
         <p id="about" class="hero__statement">Zajímají mě data, automatizace, digitalizace a&nbsp;kulturní dědictví</p>
-        <div class="hero__pair">
-          <div class="hero__sub">
+        <div class="hero__sub">
             <p>Studuji navazující magisterský program na KISKu. Mám vystudovanou estetiku a&nbsp;pedagogiku, osud mě ale nakonec zavál k&nbsp;datům, digitalizaci a&nbsp;technologiím v&nbsp;oblasti kulturního dědictví. Pracuji na digitalizačním pracovišti druhé největší muzejní instituce v&nbsp;České republice (MZM), kde se věnuji 2D a&nbsp;3D digitalizaci, podpoře odborné činnosti a&nbsp;zpracování digitálních dat.</p>
             <p>Od studia na KISKu očekávám získání teoretického i&nbsp;praktického rámce pro práci s&nbsp;daty a&nbsp;digitálními sbírkami. Mým cílem je prohloubit své datové dovednosti a&nbsp;stát se plnohodnotným datovým kurátorem a&nbsp;analytikem.</p>
-          </div>
-          <div class="codeflow" aria-hidden="true">
-            <div class="codeflow__track">
-              <div><span class="tk-c"># load dataset</span></div>
-              <div><span class="tk-k">import</span> <span class="tk-v">pandas</span> <span class="tk-k">as</span> <span class="tk-v">pd</span></div>
-              <div><span class="tk-v">df</span> = <span class="tk-v">pd</span>.<span class="tk-f">read_csv</span>(<span class="tk-s">"records.csv"</span>)</div>
-              <div><span class="tk-v">df</span> = <span class="tk-v">df</span>.<span class="tk-f">dropna</span>(<span class="tk-v">subset</span>=[<span class="tk-s">"id"</span>])</div>
-              <div>&nbsp;</div>
-              <div><span class="tk-c">-- summary</span></div>
-              <div><span class="tk-k">SELECT</span> <span class="tk-v">category</span>, <span class="tk-f">COUNT</span>(*) <span class="tk-k">AS</span> <span class="tk-v">total</span></div>
-              <div><span class="tk-k">FROM</span> <span class="tk-v">items</span> <span class="tk-k">WHERE</span> <span class="tk-v">status</span> = <span class="tk-n">1</span></div>
-              <div><span class="tk-k">GROUP BY</span> <span class="tk-v">category</span> <span class="tk-k">ORDER BY</span> <span class="tk-v">total</span> <span class="tk-k">DESC</span>;</div>
-              <div>&nbsp;</div>
-              <div><span class="tk-c"># batch process</span></div>
-              <div><span class="tk-v">model</span> = <span class="tk-v">loader</span>.<span class="tk-f">load</span>(<span class="tk-s">"input.glb"</span>)</div>
-              <div><span class="tk-v">model</span>.<span class="tk-f">export</span>(<span class="tk-s">"output.glb"</span>)</div>
-              <div><span class="tk-k">for</span> <span class="tk-v">file</span> <span class="tk-k">in</span> <span class="tk-v">batch</span>:</div>
-              <div>    <span class="tk-f">convert</span>(<span class="tk-v">file</span>, <span class="tk-v">dpi</span>=<span class="tk-n">600</span>)</div>
-              <div>&nbsp;</div>
-            </div>
-          </div>
         </div>
       </div>
     </header>
@@ -75,10 +53,10 @@
           <div class="entry__links"><a href="https://github.com/Vala-Jan/3D-Gallery" target="_blank" rel="noopener">GitHub ↗</a></div>
         </li>
         <li class="entry">
-          <h3 class="entry__title">WeatherNow — předpověď počasí</h3>
-          <p class="entry__desc">Rychlá progresivní webová aplikace nad veřejným API s offline podporou a personalizovanými lokacemi.</p>
-          <ul class="entry__stack"><li>TypeScript</li><li>Vite</li><li>Public API</li></ul>
-          <div class="entry__links"><a href="#">GitHub ↗</a></div>
+          <h3 class="entry__title">Inventa</h3>
+          <p class="entry__desc">Automatizovaný systém pro zpracování, kontrolu kvality a&nbsp;bezpečný import (ingest) rozsáhlých digitalizovaných dat z&nbsp;muzejních sbírek. Navrženo dvoufázově: kontrola a&nbsp;přenos na síťový archív.</p>
+          <ul class="entry__stack"><li>Python</li><li>Tkinter</li><li>Pillow</li><li>ExifTool</li></ul>
+          <div class="entry__links"><a href="https://github.com/Vala-Jan/Inventa" target="_blank" rel="noopener">GitHub ↗</a></div>
         </li>
         <li class="entry">
           <h3 class="entry__title">Portfolio v1</h3>
@@ -169,10 +147,6 @@
   const views = { omne: ['home', 'about'], about: ['home', 'about'], projekty: ['home', 'projects'], projects: ['home', 'projects'], studium: ['studium'], cv: ['cv'], profesnicv: ['cv'] };
   let current = null;
 
-  // code loop: repeat lines so the scroll is seamless
-  const track = document.querySelector('.codeflow__track');
-  track.innerHTML = track.innerHTML.repeat(4);
-
   // nav underline
   const setActive = (i) => links.forEach((a, j) => a.classList.toggle('is-active', j === i));
   const updateActive = () => {
@@ -207,18 +181,18 @@
   addEventListener('popstate', () => show(...fromLocation()));
   addEventListener('hashchange', () => show(...fromLocation()));
   addEventListener('pageshow', (e) => { if (e.persisted) show(...fromLocation()); });
-  addEventListener('scroll', updateActive, { passive: true });
+  addEventListener('resize', updateActive);
+  addEventListener('load', updateActive);
 
-  // mobile: hide the bar when scrolling down, show it when scrolling up
+  // scroll: nav underline + on mobile hide the bar going down, show it going up
   const mobile = matchMedia('(max-width: 640px)');
   let lastY = scrollY;
   addEventListener('scroll', () => {
     const y = scrollY;
     nav.classList.toggle('nav--hidden', mobile.matches && y > lastY && y > nav.offsetHeight);
     lastY = y;
+    updateActive();
   }, { passive: true });
-  addEventListener('resize', updateActive);
-  addEventListener('load', updateActive);
 
   // CV (loaded on first open)
   const CV = 'uploads/CV-JanVala.pdf';
