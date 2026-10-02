@@ -1,6 +1,6 @@
 # Portfolio
 
-Osobní portfolio Jana Valy — statický web (HTML/CSS/JS, bez buildu), nasazovaný na GitHub Pages.
+Osobní portfolio — statický web (HTML/CSS/JS, bez buildu), nasazovaný na GitHub Pages.
 
 ## Struktura
 
