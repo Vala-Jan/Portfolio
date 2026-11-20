@@ -260,7 +260,8 @@ h1, h2, h3 { font-weight: 400; }
 .sem__head { padding: 1rem 1.25rem; font-family: var(--font-display); font-size: clamp(1.1rem, 1.8vw, 1.4rem); }
 .sem__head::after { font-size: 1.4em; }
 .sem__body { min-height: 3rem; padding: 0 1.25rem 1.25rem; }
-.subj__head { padding: 0.7rem 1rem; letter-spacing: 0.04em; }
+.subj__head { padding: 0.7rem 1rem; letter-spacing: 0.02em; }
+.subj__code { margin-right: 0.35em; font-weight: 700; letter-spacing: 0.04em; }
 .subj__head::after { font-size: 1.2em; }
 .subj__body { padding: 0 1rem 1rem; line-height: 1.55; }
 .subj__body p + .subj__label { margin-top: 1rem; }
