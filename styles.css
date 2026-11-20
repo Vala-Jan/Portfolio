@@ -212,8 +212,10 @@ h1, h2, h3 { font-weight: 400; }
   font-size: clamp(1.1rem, 2vw, 1.4rem);
   letter-spacing: 0.01em;
   text-transform: uppercase;
+  overflow-wrap: anywhere;
 }
 .entry__desc { margin-bottom: 0.9rem; }
+.entry { min-width: 0; }
 .entry__stack {
   display: flex;
   flex-wrap: wrap;
@@ -261,6 +263,15 @@ h1, h2, h3 { font-weight: 400; }
 .subj__head { padding: 0.7rem 1rem; letter-spacing: 0.04em; }
 .subj__head::after { font-size: 1.2em; }
 .subj__body { padding: 0 1rem 1rem; line-height: 1.55; }
+.subj__body p + .subj__label { margin-top: 1rem; }
+.subj__label {
+  margin-bottom: 0.3rem;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
 
 /* ---------- profesní CV ---------- */
 .cv__pages { display: grid; gap: 1rem; max-width: 900px; margin: 1.5rem auto 0; }
